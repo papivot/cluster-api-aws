@@ -370,7 +370,47 @@ ip-10-0-0-18.us-east-2.compute.internal    Ready    master   15h     v1.16.1
 ```
 #### Manually decreasing the # of worker nodes
 
+This is as simple as decreasing the replica count of the machinedeployments object.  
 
+```shell
+kubectl get md -n default
+kubectl edit md workload-cluster-md-0 -o yaml
+```
+Increase the `replica` from 3 to 2 and save the file (in this example)
+
+```yaml
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: cluster.x-k8s.io/v1alpha2
+kind: MachineDeployment
+metadata:
+...
+  name: workload-cluster-md-0
+  namespace: default
+  ownerReferences:
+  - apiVersion: cluster.x-k8s.io/v1alpha2
+...
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 2
+``` 
+With a few minutes, a node will be drai  ec2 instance will be spawned and added to the new cluster.  This can be validated in the EC2 console as well as the following command - 
+
+```shell
+kubectl --kubeconfig=/tmp/workload-cluster.conf get nodes
+```
+
+```console
+NAME                                       STATUS   ROLES    AGE     VERSION
+ip-10-0-0-158.us-east-2.compute.internal   Ready    <none>   15h     v1.16.1
+ip-10-0-0-19.us-east-2.compute.internal    Ready    <none>   15h     v1.16.1
+ip-10-0-0-244.us-east-2.compute.internal   Ready    <none>   8m36s   v1.16.1
+ip-10-0-0-18.us-east-2.compute.internal    Ready    master   15h     v1.16.1
+...
+```
 
 ----------
 
@@ -382,7 +422,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2Nzc1OTEyNjMsMTk2MjQ3Njk2OCwtOT
-E4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMw
-NjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbMTU1NjExODUxNSwxOTYyNDc2OTY4LC05MT
+gwODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwtMTM0MzA2
+MTE2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNdfQ==
 -->
