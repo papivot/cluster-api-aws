@@ -75,7 +75,6 @@ sudo mv kind /usr/local/bin
 ```shell
 git clone https://github.com/kubernetes-sigs/cluster-api-provider-aws.git --branch release-0.4
 cd cluster-api-provider-aws
-#### make test # To validate everything works fine
 make binaries
 ```
 
@@ -238,7 +237,6 @@ Validate within the AWS console that a new VPC with associated subnets, NAT gate
 ```shell
 kubectl apply -f ./examples/_out/controlplane.yaml
 ```
-
 ```console
 kubeadmconfig.bootstrap.cluster.x-k8s.io/workload-cluster-controlplane-0 created
 kubeadmconfig.bootstrap.cluster.x-k8s.io/workload-cluster-controlplane-1 created
@@ -250,7 +248,9 @@ awsmachine.infrastructure.cluster.x-k8s.io/workload-cluster-controlplane-0 creat
 awsmachine.infrastructure.cluster.x-k8s.io/workload-cluster-controlplane-1 created
 awsmachine.infrastructure.cluster.x-k8s.io/workload-cluster-controlplane-2 created
 ```
+
+This may take a while - 10-15 mins. Once this is complete, we need to grab the kubeconfig file that was associated with this workload server. The kubeconfig is stop
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc4OTA2OTUyNSwtMTM0MzA2MTE2NiwxMD
-c2NzE5NTksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbODkzOTIwODg3LC03ODkwNjk1MjUsLTEzND
+MwNjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
