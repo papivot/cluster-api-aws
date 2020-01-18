@@ -175,9 +175,46 @@ local-path-storage   local-path-provisioner-7745554f7f-ktlj5            1/1     
 Install the Cluster API CRDs and controllers to this newly created management cluster -
 
 ```shell
-
+kubectl apply -f ./examples/_out/provider-components.yaml
+```
+This should create all the necessary CRDs and controllers in the cluster, with an output similar to this -
+```console
+namespace/cabpk-system created
+namespace/capa-system created
+namespace/capi-system created
+customresourcedefinition.apiextensions.k8s.io/awsclusters.infrastructure.cluster.x-k8s.io created
+customresourcedefinition.apiextensions.k8s.io/awsmachines.infrastructure.cluster.x-k8s.io created
+customresourcedefinition.apiextensions.k8s.io/awsmachinetemplates.infrastructure.cluster.x-k8s.io created
+customresourcedefinition.apiextensions.k8s.io/clusters.cluster.x-k8s.io created
+customresourcedefinition.apiextensions.k8s.io/kubeadmconfigs.bootstrap.cluster.x-k8s.io created
+customresourcedefinition.apiextensions.k8s.io/kubeadmconfigtemplates.bootstrap.cluster.x-k8s.io created
+customresourcedefinition.apiextensions.k8s.io/machinedeployments.cluster.x-k8s.io created
+customresourcedefinition.apiextensions.k8s.io/machines.cluster.x-k8s.io created
+customresourcedefinition.apiextensions.k8s.io/machinesets.cluster.x-k8s.io created
+role.rbac.authorization.k8s.io/cabpk-leader-election-role created
+role.rbac.authorization.k8s.io/capa-leader-election-role created
+role.rbac.authorization.k8s.io/capi-leader-election-role created
+clusterrole.rbac.authorization.k8s.io/cabpk-manager-role created
+clusterrole.rbac.authorization.k8s.io/cabpk-proxy-role created
+clusterrole.rbac.authorization.k8s.io/capa-manager-role created
+clusterrole.rbac.authorization.k8s.io/capa-proxy-role created
+clusterrole.rbac.authorization.k8s.io/capi-manager-role created
+rolebinding.rbac.authorization.k8s.io/cabpk-leader-election-rolebinding created
+rolebinding.rbac.authorization.k8s.io/capa-leader-election-rolebinding created
+rolebinding.rbac.authorization.k8s.io/capi-leader-election-rolebinding created
+clusterrolebinding.rbac.authorization.k8s.io/cabpk-manager-rolebinding created
+clusterrolebinding.rbac.authorization.k8s.io/cabpk-proxy-rolebinding created
+clusterrolebinding.rbac.authorization.k8s.io/capa-manager-rolebinding created
+clusterrolebinding.rbac.authorization.k8s.io/capa-proxy-rolebinding created
+clusterrolebinding.rbac.authorization.k8s.io/capi-manager-rolebinding created
+secret/capa-manager-bootstrap-credentials created
+service/cabpk-controller-manager-metrics-service created
+service/capa-controller-manager-metrics-service created
+deployment.apps/cabpk-controller-manager created
+deployment.apps/capa-controller-manager created
+deployment.apps/capi-controller-manager created
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNDMwNjExNjYsMTA3NjcxOTU5LC0xNj
-g2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbLTExOTY3NjM2NzEsLTEzNDMwNjExNjYsMT
+A3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
