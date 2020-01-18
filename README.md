@@ -27,13 +27,20 @@ machinedeployments 		md 		cluster.x-k8s.io 	true 	MachineDeployment
 machines 				ma 		cluster.x-k8s.io 	true 	Machine
 machinesets 			ms 		cluster.x-k8s.io 	true 	MachineSet
 
-awsclusters 						infrastructure.cluster.x-k8s.io true AWSCluster
-awsmachines 						infrastructure.cluster.x-k8s.io true AWSMachine
-awsmachinetemplates 				infrastructure.cluster.x-k8s.io true AWSMachineTemplate
+awsclusters 					infrastructure.cluster.x-k8s.io true AWSCluster
+awsmachines 					infrastructure.cluster.x-k8s.io true AWSMachine
+awsmachinetemplates 			infrastructure.cluster.x-k8s.io true AWSMachineTemplate
 
-kubeadmconfigs bootstrap.cluster.x-k8s.io true KubeadmConfig
-kubeadmconfigtemplates bootstrap.cluster.x-k8s.io true KubeadmConfigTemplate
+kubeadmconfigs 					bootstrap.cluster.x-k8s.io true KubeadmConfig
+kubeadmconfigtemplates 			bootstrap.cluster.x-k8s.io true KubeadmConfigTemplate
+```
+
+The controllers and and apiservices are as follows - 
+
+```
+cluster-api-controller - v1alpha2.cluster.x-k8s.io
+cluster-api-aws-controller - v1alpha2.infrastructure.cluster.x-k8s.io
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NjI1NDQwMDFdfQ==
+eyJoaXN0b3J5IjpbODgzMDk0MzQxXX0=
 -->
