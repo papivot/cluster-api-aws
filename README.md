@@ -138,10 +138,31 @@ kind create cluster --name=clusterapi
 In a few minutes, the management cluster is instantiated in the Ubuntu server!!!
 
 ```console
+Creating cluster "clusterapi" ...
+ ✓ Ensuring node image (kindest/node:v1.17.0) 🖼
+ ✓ Preparing nodes 📦
+ ✓ Writing configuration 📜
+ ✓ Starting control-plane 🕹️
+ ✓ Installing CNI 🔌
+ ✓ Installing StorageClass 💾
+Set kubectl context to "kind-clusterapi"
+You can now use your cluster with:
 
+kubectl cluster-info --context kind-clusterapi
+
+Thanks for using kind! 😊
+```
+Make sure the cluster is accessible using the kubeconfig file 
+
+```shell
+kubectl get pods --all-namespaces
+```
+should retunr something similar
+
+```console
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzMzQ5ODcwMzMsMTA3NjcxOTU5LC0xNj
+eyJoaXN0b3J5IjpbLTE1MDkyMTYzOTMsMTA3NjcxOTU5LC0xNj
 g2ODU3NDEzXX0=
 -->
