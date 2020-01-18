@@ -231,8 +231,10 @@ kubectl apply -f ./examples/_out/cluster.yaml
 cluster.cluster.x-k8s.io/workload-cluster created
 awscluster.infrastructure.cluster.x-k8s.io/workload-cluster created
 ```
-Validate within the AWS console that a new VPC with associated subnets, NAT gateway, security 
+Validate within the AWS console that a new VPC with associated subnets, NAT gateway, security groups and a bastion server has been created. This should take approx. 10 mins. 
+
+* Step 2 - 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNjM0Nzc2NzEsLTEzNDMwNjExNjYsMT
-A3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbLTk3OTMzMDA1NywtMTM0MzA2MTE2NiwxMD
+c2NzE5NTksLTE2ODY4NTc0MTNdfQ==
 -->
