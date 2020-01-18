@@ -508,7 +508,6 @@ In the current example, observe the 4 master nodes.
 ```shell
 kubectl --kubeconfig=/tmp/workload-cluster.conf get nodes
 ```
-
 ```console
 NAME                                       STATUS   ROLES    AGE   VERSION
 ip-10-0-0-18.us-east-2.compute.internal    Ready    master   16h   v1.16.1
@@ -547,7 +546,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgzMzY1MDk4MCwxMDkyMDkyMjAzLC01Mj
+eyJoaXN0b3J5IjpbLTY2ODY0NTY3OCwxMDkyMDkyMjAzLC01Mj
 k4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5NzIzMTMw
 OTksMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Njk2OCwtOT
 E4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMw
