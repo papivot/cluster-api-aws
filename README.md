@@ -589,17 +589,30 @@ Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1047-aws x86_64)
 Once you are logged into the bastion host, you have to copy [scp or copy&paste] the above ssh key to the bastion host. Save it as a `.pem` file and set the access mode to `600`. For example - 
 
 ```shell
-vi .ssh/awsbastion.pem
+vi ~/.ssh/awsbastion.pem
 #Copy and paste the content of the key and save the file.
-chmod 600 .ssh/awsbastion.pem
+chmod 600 ~/.ssh/awsbastion.pem
 ```
 
 Once the file has been transferred to the bastion host, you can now connect to any of the EC2 instances that constitute the control place and worker nodes. Use the `Private DNS Name` from the AWS EC2 console for connection. 
 
 ```shell
+ssh -i ~/.ssh/awsbastion.pem ubuntu@ip-10-0-0-226.us-east-2.compute.internal
 ```
+```console
+The authenticity of host 'ip-10-0-0-226.us-east-2.compute.internal (10.0.0.226)' can't be established.
+ECDSA key fingerprint is SHA256:EQIykeXKgZiVslTw/QdyNfH2fZ/V+ZjgMkcqqsRcQNE.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ip-10-0-0-226.us-east-2.compute.internal,10.0.0.226' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1052-aws x86_64)
 
-``
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+ * Support:        https://ubuntu.com/advantage
+
+  System information as of Sat Jan 18 22:54:33 UTC 2020
+...
+```
 
 ----------
 
@@ -611,7 +624,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MTA5ODY5OTUsLTE3MDA1NTMyMzMsLT
+eyJoaXN0b3J5IjpbLTEzNzcxNDg3ODksLTE3MDA1NTMyMzMsLT
 E2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4MiwtMTIx
 MjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5MjA5Mj
 IwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNzY2NDcs
