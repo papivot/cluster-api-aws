@@ -45,10 +45,10 @@ cluster-api-kubeadm-controller 	- v1alpha2.bootstrap.cluster.x-k8s.io
 
 -----
 ### Setup 
-
+This guide will use an upto date Ubuntu 18.04 server to run a management cluster. The  management cluster can be run on any K8s cluster. For sim
 #### One time install and configuration
 
 * 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA4NDA3NjEzOV19
+eyJoaXN0b3J5IjpbMzA4MjAwNDEzXX0=
 -->
