@@ -326,7 +326,7 @@ ip-10-0-0-35.us-east-2.compute.internal    Ready    master   18m     v1.16.1
 
 ### Lifecycle management of workload cluster
 ---
-#### Increasing the # of worker nodes
+#### Manually increasing the # of worker nodes
 This is as simple as increasing the replica count of the machinedeployments object.  
 
 ```shell
@@ -364,10 +364,13 @@ kubectl --kubeconfig=/tmp/workload-cluster.conf get nodes
 NAME                                       STATUS   ROLES    AGE     VERSION
 ip-10-0-0-158.us-east-2.compute.internal   Ready    <none>   15h     v1.16.1
 ip-10-0-0-19.us-east-2.compute.internal    Ready    <none>   15h     v1.16.1
+ip-10-0-0-244.us-east-2.compute.internal   Ready    <none>   8m36s   v1.16.1
 ip-10-0-0-18.us-east-2.compute.internal    Ready    master   15h     v1.16.1
-ip-10-0-0-200.us-east-2.compute.internal   Ready    master   15h     v1.16.1
-ip-10-0-0-35.us-east-2.compute.internal    Ready    master   15h     v1.16.1
+...
 ```
+#### Manually decreasing the # of worker nodes
+
+
 
 ----------
 
@@ -379,7 +382,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjU1ODU3NTQwLDE5NjI0NzY5NjgsLTkxOD
-A4MDUxOCwtMTIzNzkxNzk2MCwtNzg5MDY5NTI1LC0xMzQzMDYx
-MTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
+eyJoaXN0b3J5IjpbLTE0NDY5NjI4NjUsMTk2MjQ3Njk2OCwtOT
+E4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMw
+NjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
