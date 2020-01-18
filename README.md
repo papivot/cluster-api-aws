@@ -323,9 +323,9 @@ ip-10-0-0-200.us-east-2.compute.internal   Ready    master   19m     v1.16.1
 ip-10-0-0-35.us-east-2.compute.internal    Ready    master   18m     v1.16.1
 ```
 
-### Lifecycle management of workload cluster
----
-#### Manually increasing the # of worker nodes
+## Lifecycle management of workload cluster
+
+### Manually increasing the # of worker nodes
 This is as simple as increasing the replica count of the machinedeployments object.  
 
 ```shell
@@ -367,7 +367,7 @@ ip-10-0-0-244.us-east-2.compute.internal   Ready    <none>   8m36s   v1.16.1
 ip-10-0-0-18.us-east-2.compute.internal    Ready    master   15h     v1.16.1
 ...
 ```
-#### Manually decreasing the # of worker nodes
+### Manually decreasing the # of worker nodes
 
 This is as simple as decreasing the replica count of the machinedeployments object.  
 
@@ -408,7 +408,7 @@ ip-10-0-0-244.us-east-2.compute.internal   Ready    <none>   15m4s   v1.16.1
 ip-10-0-0-18.us-east-2.compute.internal    Ready    master   15h     v1.16.1
 ...
 ```
-#### ~~Resurrection of a worker node~~ [this does now work as v1alpha2 does not support resurrection???]
+### ~~Resurrection of a worker node~~ [this does now work as v1alpha2 does not support resurrection???]
 For this demo, we will increase the worker node count back to 3 (in not already done). This can per performed by the steps in the section `Manually increasing the # of worker nodes` Once the cluster has reached a steady state, and all the nodes are available in the cluster, terminate one of the **worker nodes** from the AWS ec2 console. 
 
 ~~When the controller next runs the reconciliation loop and sees a missing machine from the machineset, a new ec2 instance should be spawned and added to the workload cluster.~~
@@ -446,7 +446,7 @@ workload-cluster-md-0-56d9ccc8d8-lsh4n   aws:////i-01a6e7b148de2eb18   running
 workload-cluster-md-0-56d9ccc8d8-txp5q   aws:////i-01596ec8c736d6f87   running
 ```
 
-#### Manually increasing the # of control plane nodes
+### Manually increasing the # of control plane nodes
 
 Since control plane nodes are not managed by a machinedeployment, a new control plane machine object has to be created similar to the yaml below. 
 
@@ -531,7 +531,7 @@ workload-cluster-controlplane-2          aws:////i-0ea2bf3d7fe0dc66f   running
 workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
 ...
 ```
-#### Manually decreasing the # of control plane nodes
+### Manually decreasing the # of control plane nodes
 Since control plane nodes are not managed by a machinedeployment, a control plane machine object and its associated references would need to be deleted. [check if there is a better way].In this example, we will delete the `workload-cluster-controlplane-2` machine. Doing so deletes its associated AWSMachine `workload-cluster-controlplane-2` and KubeadmConfig `workload-cluster-controlplane-2`
 
 ```shell
@@ -543,7 +543,7 @@ kubectl get ma
 kubectl get AWSMachine
 kubectl get KubeadmConfig
 ```
-#### ~~Resurrection of a control plane node~~ [this does now work as v1alpha2 does not support resurrection???]
+### ~~Resurrection of a control plane node~~ [this does now work as v1alpha2 does not support resurrection???]
 For this demo, we will increase the worker node count back to 4 (in not already done). This can per performed by the steps in the section `Manually increasing the # of control plane nodes` Once the cluster has reached a steady state, and all the master nodes are available in the cluster, terminate one of the **master nodes** from the AWS ec2 console. 
 
 ~~When the controller next runs the reconciliation loop and sees a missing machine, a new ec2 instance should be spawned and added to the workload cluster as a master node.~~
@@ -566,7 +566,7 @@ To cleanup, delete the failed machine.
 ```shell
 kubectl delete ma workload-cluster-controlplane-4
 ```
-#### Accessing the EC2 instances
+### Accessing the EC2 instances
 
 Note the IP/Public DNS of the bastion host associated with the cluster. For e.g. `ec2-[ip-address].us-east-2.compute.amazonaws.com`
 
@@ -614,9 +614,9 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1052-aws x86_64)
 ...
 ```
 
-----------
 
-References - 
+
+## References
 
 1. [https://blog.scottlowe.org/2019/08/27/bootstrapping-a-kubernetes-cluster-on-aws-with-clusterapi/](https://blog.scottlowe.org/2019/08/27/bootstrapping-a-kubernetes-cluster-on-aws-with-clusterapi/)
 2. [https://cluster-api.sigs.k8s.io/tasks/installation.html](https://cluster-api.sigs.k8s.io/tasks/installation.html)
@@ -624,7 +624,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTg5ODAwMDY2NCwtMTcwMDU1MzIzMywtMT
+eyJoaXN0b3J5IjpbLTcwOTAwOTU3OCwtMTcwMDU1MzIzMywtMT
 YwNjQ1NTMyMiwxOTIyMzIyNzI5LC0yMTM4MTQyMzgyLC0xMjEy
 NDI1OTY0LC01NDEzMzQyNjQsLTY2ODY0NTY3OCwxMDkyMDkyMj
 AzLC01Mjk4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5
