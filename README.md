@@ -531,38 +531,16 @@ workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
 ...
 ```
 #### Manually decreasing the # of control plane nodes
-
 Since control plane nodes are not managed by a machinedeployment, a control plane machine object and its associated references would need to be deleted. [check if there is a better way].In this example, we will delete the `workload-cluster-controlplane-2` machine. Doing so deletes its associated AWSMachine `workload-cluster-controlplane-2` and KubeadmConfig `workload-cluster-controlplane-2`
 
 ```shell
 kubectl delete ma workload-cluster-controlplane-2
 ```
 execute to following to validate that the objects have been removed and EC2 instance has been terminated in the AWS console.
-```she
+```shell
 kubectl get ma
-NAME                                     PROVIDERID                    PHASE
-workload-cluster-controlplane-0          aws:////i-09558d582b46da80b   running
-workload-cluster-controlplane-1          aws:////i-06543eae83b8a5378   running
-workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
-workload-cluster-md-0-56d9ccc8d8-dvrrj   aws:////i-0902f6ca5d2d21b1b   running
-workload-cluster-md-0-56d9ccc8d8-lsh4n   aws:////i-01a6e7b148de2eb18   running
-workload-cluster-md-0-56d9ccc8d8-txp5q   aws:////i-01596ec8c736d6f87   running
 kubectl get AWSMachine
-NAME                              AGE
-workload-cluster-controlplane-0   17h
-workload-cluster-controlplane-1   17h
-workload-cluster-controlplane-3   41m
-workload-cluster-md-0-2g8dp       18m
-workload-cluster-md-0-5x69f       104m
-workload-cluster-md-0-jtq45       84m
 kubectl get KubeadmConfig
-NAME                              AGE
-workload-cluster-controlplane-0   17h
-workload-cluster-controlplane-1   17h
-workload-cluster-controlplane-3   41m
-workload-cluster-md-0-7mtbn       18m
-workload-cluster-md-0-fxx2p       105m
-workload-cluster-md-0-m5nqj       84m
 ```
 
 
@@ -576,10 +554,10 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ2MTUzNTUzMCwtNTQxMzM0MjY0LC02Nj
-g2NDU2NzgsMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIw
-NDM5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LDE4MDE1NjY4MzUsOD
-QyOTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMTIzNzkx
-Nzk2MCwtNzg5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3MTk1OS
-wtMTY4Njg1NzQxM119
+eyJoaXN0b3J5IjpbLTEyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNj
+Y4NjQ1Njc4LDEwOTIwOTIyMDMsLTUyOTgyMzcwOCwtMTEyODYy
+MDQzOSwtMzU3MDc2NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LD
+g0Mjk3Mzk0OSwxOTYyNDc2OTY4LC05MTgwODA1MTgsLTEyMzc5
+MTc5NjAsLTc4OTA2OTUyNSwtMTM0MzA2MTE2NiwxMDc2NzE5NT
+ksLTE2ODY4NTc0MTNdfQ==
 -->
