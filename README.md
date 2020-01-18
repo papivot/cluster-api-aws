@@ -570,10 +570,13 @@ kubectl delete ma workload-cluster-controlplane-4
 
 Note the IP/Public DNS of the bastion host associated with the cluster. For e.g. `ec2-[ip-address].us-east-2.compute.amazonaws.com`
 
-Use the ssh key that was references in the previous section to ssh into the bastion host. 
+Use the ssh key that was references in the previous section to ssh into the bastion host. For e.g.
 
 ```shell
-ssh -i 
+ssh -i ssh -i [path/to]/awsbastion.pem ubuntu@ec2-ip-address.us-east-2.compute.amazonaws.com
+```
+```console
+
 ```
 
 
@@ -587,7 +590,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkxNjk2Nzg4OSwtMTcwMDU1MzIzMywtMT
+eyJoaXN0b3J5IjpbMTU0NzA3NzQ4NCwtMTcwMDU1MzIzMywtMT
 YwNjQ1NTMyMiwxOTIyMzIyNzI5LC0yMTM4MTQyMzgyLC0xMjEy
 NDI1OTY0LC01NDEzMzQyNjQsLTY2ODY0NTY3OCwxMDkyMDkyMj
 AzLC01Mjk4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5
