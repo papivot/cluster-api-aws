@@ -307,7 +307,7 @@ kube-system   etcd-ip-10-0-0-18.us-east-2.compute.internal                      
 ...
 ```
 
-* Step 5. - Deploy the worker nodes leveraging the cluster API.
+* Step 5 - Deploy the worker nodes leveraging the cluster API.
 
 ```shell
 kubectl apply -f ./examples/_out/machinedeployment.yaml
@@ -329,7 +329,9 @@ References -
 1. [https://blog.scottlowe.org/2019/08/27/bootstrapping-a-kubernetes-cluster-on-aws-with-clusterapi/](https://blog.scottlowe.org/2019/08/27/bootstrapping-a-kubernetes-cluster-on-aws-with-clusterapi/)
 2. [https://cluster-api.sigs.k8s.io/tasks/installation.html](https://cluster-api.sigs.k8s.io/tasks/installation.html)
 3. [https://github.com/kubernetes-sigs/cluster-api-provider-aws/blob/v0.3.7/docs/getting-started.md](https://github.com/kubernetes-sigs/cluster-api-provider-aws/blob/v0.3.7/docs/getting-started.md)
+4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
+5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjgyMTQ0MjExLC03ODkwNjk1MjUsLTEzND
-MwNjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbLTIwOTMyMDAwMDgsLTc4OTA2OTUyNSwtMT
+M0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNdfQ==
 -->
