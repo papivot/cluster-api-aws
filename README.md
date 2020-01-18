@@ -414,6 +414,12 @@ For this demo, we will increase the worker node count back to 3 (in not already 
 
 ~~When the controller next runs the reconciliation loop and sees a missing machine from the machineset, a new ec2 instance should be spawned and added to the workload cluster.~~
 
+Checking the machine status shows the following error 
+
+`  errorMessage: 'Failure detected from referenced resource infrastructure.cluster.x-k8s.io/v1alpha2,
+    Kind=AWSMachine with name "workload-cluster-md-0-8bfwx": EC2 instance state "terminated"
+    is unexpected'`
+
 #### Manually increasing the # of master nodes
 
 Since control plane nodes are not managed by a machinedeployment, a new control plane machine object has to be created similar to the yaml below. 
@@ -495,9 +501,9 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMz
-U3MDc2NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0
-OSwxOTYyNDc2OTY4LC05MTgwODA1MTgsLTEyMzc5MTc5NjAsLT
-c4OTA2OTUyNSwtMTM0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4
-NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbMTU4ODY3NjUxOSwtNTI5ODIzNzA4LC0xMT
+I4NjIwNDM5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LDE4MDE1NjY4
+MzUsODQyOTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMT
+IzNzkxNzk2MCwtNzg5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3
+MTk1OSwtMTY4Njg1NzQxM119
 -->
