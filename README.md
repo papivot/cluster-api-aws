@@ -564,7 +564,8 @@ workload-cluster-controlplane-4          aws:////i-02dcb5b3fd5ada5aa   failed
 To cleanup, delete the failed machine. 
 
 ```shell
-
+kubectl delete ma workload-cluster-controlplane-4
+```
 
 ----------
 
@@ -576,11 +577,11 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI1NzY2MDcxLC0xNjA2NDU1MzIyLDE5Mj
-IzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0MjU5NjQsLTU0MTMz
-NDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMDMsLTUyOTgyMzcwOC
-wtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3MjMxMzA5OSwxODAx
-NTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OTY4LC05MTgwODA1MT
-gsLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwtMTM0MzA2MTE2Niwx
-MDc2NzE5NTldfQ==
+eyJoaXN0b3J5IjpbLTE3MDA1NTMyMzMsLTE2MDY0NTUzMjIsMT
+kyMjMyMjcyOSwtMjEzODE0MjM4MiwtMTIxMjQyNTk2NCwtNTQx
+MzM0MjY0LC02Njg2NDU2NzgsMTA5MjA5MjIwMywtNTI5ODIzNz
+A4LC0xMTI4NjIwNDM5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LDE4
+MDE1NjY4MzUsODQyOTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4MD
+UxOCwtMTIzNzkxNzk2MCwtNzg5MDY5NTI1LC0xMzQzMDYxMTY2
+LDEwNzY3MTk1OV19
 -->
