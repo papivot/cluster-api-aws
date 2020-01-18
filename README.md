@@ -533,7 +533,7 @@ workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
 ```
 #### Manually decreasing the # of control plane nodes
 
-Since control plane nodes are not managed by a machinedeployment, a control plane machine object has to be created similar to the yaml below. 
+Since control plane nodes are not managed by a machinedeployment, a control plane machine object and its associated references would need to be deleted. [check if there is a better way]
 
 
 
@@ -547,9 +547,9 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNjM5MDc5MTI3LDEwOTIwOTIyMDMsLTUyOT
-gyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3MjMxMzA5
-OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OTY4LC05MT
-gwODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwtMTM0MzA2
-MTE2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbMTgzMzY1MDk4MCwxMDkyMDkyMjAzLC01Mj
+k4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5NzIzMTMw
+OTksMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Njk2OCwtOT
+E4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMw
+NjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
