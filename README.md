@@ -566,6 +566,10 @@ To cleanup, delete the failed machine.
 ```shell
 kubectl delete ma workload-cluster-controlplane-4
 ```
+#### Accessing the EC2 instances
+
+Note the IP/Public DNS of the
+
 
 ----------
 
@@ -577,11 +581,11 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3MDA1NTMyMzMsLTE3MDA1NTMyMzMsLT
-E2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4MiwtMTIx
-MjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5MjA5Mj
-IwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNzY2NDcs
-OTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOTQ5LDE5NjI0Nz
-Y5NjgsLTkxODA4MDUxOCwtMTIzNzkxNzk2MCwtNzg5MDY5NTI1
-LC0xMzQzMDYxMTY2XX0=
+eyJoaXN0b3J5IjpbMjAzNDI2OTIxLC0xNzAwNTUzMjMzLC0xNj
+A2NDU1MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0
+MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMD
+MsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3
+MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OT
+Y4LC05MTgwODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwt
+MTM0MzA2MTE2Nl19
 -->
