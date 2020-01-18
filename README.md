@@ -75,7 +75,6 @@ git clone https://github.com/kubernetes-sigs/cluster-api-provider-aws.git --bran
 cd cluster-api-provider-aws
 #### make test # To validate everything works fine
 make binaries
-make generate-examples
 ```
 
 Copy the generated **clusterawsadm** binary to /usr/local/bin
@@ -125,8 +124,13 @@ export CONTROL_PLANE_MACHINE_TYPE="t2.medium"
 export NODE_MACHINE_TYPE="t2.medium"
 ```
 
-Generate the sample yaml files that will be required to setup the management cluster (CRDs/controllers) and the 
+Generate the sample yaml files that will be required to setup the management cluster (CRDs/controllers) and the files needed to setup the workload clusters. 
+
+```shell
+make generate-examples
+```
+All the yamls are generated in the `./example/_out` folder
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwNDYxMzA3LDEwNzY3MTk1OSwtMTY4Nj
-g1NzQxM119
+eyJoaXN0b3J5IjpbLTE5MDY5NDg2MzgsMTA3NjcxOTU5LC0xNj
+g2ODU3NDEzXX0=
 -->
