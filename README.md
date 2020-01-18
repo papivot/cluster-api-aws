@@ -542,6 +542,10 @@ kubectl get ma
 kubectl get AWSMachine
 kubectl get KubeadmConfig
 ```
+#### ~~Resurrection of a control plane node~~ [this does now work as v1alpha2 does not support resurrection???]
+For this demo, we will increase the worker node count back to 4 (in not already done). This can per performed by the steps in the section `Manually increasing the # of control plane nodes` Once the cluster has reached a steady state, and all the nodes are available in the cluster, terminate one of the **master nodes** from the AWS ec2 console. 
+
+~~When the controller next runs the reconciliation loop and sees a missing machine from the machineset, a new ec2 instance should be spawned and added to the workload cluster.~~
 
 
 ----------
@@ -554,10 +558,10 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAxNjkwNjU0NCwtMTIxMjQyNTk2NCwtNT
-QxMzM0MjY0LC02Njg2NDU2NzgsMTA5MjA5MjIwMywtNTI5ODIz
-NzA4LC0xMTI4NjIwNDM5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LD
-E4MDE1NjY4MzUsODQyOTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4
-MDUxOCwtMTIzNzkxNzk2MCwtNzg5MDY5NTI1LC0xMzQzMDYxMT
-Y2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
+eyJoaXN0b3J5IjpbLTIxMzgxNDIzODIsLTEyMTI0MjU5NjQsLT
+U0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMDMsLTUyOTgy
+MzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3MjMxMzA5OS
+wxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OTY4LC05MTgw
+ODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwtMTM0MzA2MT
+E2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNdfQ==
 -->
