@@ -536,7 +536,7 @@ Since control plane nodes are not managed by a machinedeployment, a control plan
 ```shell
 kubectl delete ma workload-cluster-controlplane-2
 ```
-execute to following to validate that the objects have been removed and EC2 instance has been terminated in the AWS console.
+Run the following commands to validate that the objects have been removed and EC2 instance has been terminated in the AWS console.
 ```shell
 kubectl get ma
 kubectl get AWSMachine
@@ -554,10 +554,10 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNj
-Y4NjQ1Njc4LDEwOTIwOTIyMDMsLTUyOTgyMzcwOCwtMTEyODYy
-MDQzOSwtMzU3MDc2NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LD
-g0Mjk3Mzk0OSwxOTYyNDc2OTY4LC05MTgwODA1MTgsLTEyMzc5
-MTc5NjAsLTc4OTA2OTUyNSwtMTM0MzA2MTE2NiwxMDc2NzE5NT
-ksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbMjAxNjkwNjU0NCwtMTIxMjQyNTk2NCwtNT
+QxMzM0MjY0LC02Njg2NDU2NzgsMTA5MjA5MjIwMywtNTI5ODIz
+NzA4LC0xMTI4NjIwNDM5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LD
+E4MDE1NjY4MzUsODQyOTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4
+MDUxOCwtMTIzNzkxNzk2MCwtNzg5MDY5NTI1LC0xMzQzMDYxMT
+Y2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
 -->
