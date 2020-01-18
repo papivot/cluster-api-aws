@@ -110,8 +110,21 @@ AWS::IAM::Role |nodes.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
 
 This completes the preliminary steps required to setup the environment. These steps are performed only once.
 
-#### Setting up the management cluster 
+#### Setting up the Management Cluster 
+
+Export the following environment variables. These variables can be modified as per the requirements. 
+
+```console
+export AWS_CREDENTIALS=$(aws iam create-access-key --user-name bootstrapper.cluster-api-provider-aws.sigs.k8s.io)
+export AWS_ACCESS_KEY_ID=$(echo $AWS_CREDENTIALS | jq .AccessKey.AccessKeyId -r)
+export AWS_SECRET_ACCESS_KEY=$(echo $AWS_CREDENTIALS | jq .AccessKey.SecretAccessKey -r)
+export SSH_KEY_NAME="awsbastion"
+export CLUSTER_NAME="workload-cluster"
+export AWS_REGION="us-east-2"
+export CONTROL_PLANE_MACHINE_TYPE="t2.medium"
+export NODE_MACHINE_TYPE="t2.medium"
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTMwMzA4MjEyNSwxMDc2NzE5NTksLTE2OD
+eyJoaXN0b3J5IjpbLTc0MjM0OTk0OSwxMDc2NzE5NTksLTE2OD
 Y4NTc0MTNdfQ==
 -->
