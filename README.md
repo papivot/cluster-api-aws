@@ -542,9 +542,9 @@ kubectl get AWSMachine
 kubectl get KubeadmConfig
 ```
 #### ~~Resurrection of a control plane node~~ [this does now work as v1alpha2 does not support resurrection???]
-For this demo, we will increase the worker node count back to 4 (in not already done). This can per performed by the steps in the section `Manually increasing the # of control plane nodes` Once the cluster has reached a steady state, and all the nodes are available in the cluster, terminate one of the **master nodes** from the AWS ec2 console. 
+For this demo, we will increase the worker node count back to 4 (in not already done). This can per performed by the steps in the section `Manually increasing the # of control plane nodes` Once the cluster has reached a steady state, and all the master nodes are available in the cluster, terminate one of the **master nodes** from the AWS ec2 console. 
 
-~~When the controller next runs the reconciliation loop and sees a missing machine from the machineset, a new ec2 instance should be spawned and added to the workload cluster.~~
+~~When the controller next runs the reconciliation loop and sees a missing machine, a new ec2 instance should be spawned and added to the workload cluster as a master node.~~
 
 
 ----------
@@ -557,11 +557,11 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0Mjg4NTM1NDYsLTIxMzgxNDIzODIsLT
-EyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIw
-OTIyMDMsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2Nj
-Q3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYy
-NDc2OTY4LC05MTgwODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2OT
-UyNSwtMTM0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNd
-fQ==
+eyJoaXN0b3J5IjpbMTM0MDA5ODg3OSwtMjEzODE0MjM4MiwtMT
+IxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5MjA5
+MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNzY2ND
+csOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOTQ5LDE5NjI0
+NzY5NjgsLTkxODA4MDUxOCwtMTIzNzkxNzk2MCwtNzg5MDY5NT
+I1LC0xMzQzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
+
 -->
