@@ -324,6 +324,10 @@ ip-10-0-0-200.us-east-2.compute.internal   Ready    master   19m     v1.16.1
 ip-10-0-0-35.us-east-2.compute.internal    Ready    master   18m     v1.16.1
 ```
 
+### Lifecycle management of workload cluster
+---
+#### Increasing the # of worker nodes
+
 
 
 ----------
@@ -336,7 +340,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTkxODA4MDUxOCwtMTIzNzkxNzk2MCwtNz
-g5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1
-NzQxM119
+eyJoaXN0b3J5IjpbMTk2MjQ3Njk2OCwtOTE4MDgwNTE4LC0xMj
+M3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMwNjExNjYsMTA3Njcx
+OTU5LC0xNjg2ODU3NDEzXX0=
 -->
