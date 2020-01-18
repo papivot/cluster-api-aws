@@ -548,6 +548,21 @@ For this demo, we will increase the worker node count back to 4 (in not already 
 
 ~~When the controller next runs the reconciliation loop and sees a missing machine, a new ec2 instance should be spawned and added to the workload cluster as a master node.~~
 
+Notice the state of the machine - 
+
+```shell
+kubectl get ma
+NAME                                     PROVIDERID                    PHASE
+workload-cluster-controlplane-0          aws:////i-09558d582b46da80b   running
+workload-cluster-controlplane-1          aws:////i-06543eae83b8a5378   running
+workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
+workload-cluster-controlplane-4          aws:////i-02dcb5b3fd5ada5aa   failed
+workload-cluster-md-0-56d9ccc8d8-dvrrj   aws:////i-0902f6ca5d2d21b1b   running
+workload-cluster-md-0-56d9ccc8d8-lsh4n   aws:////i-01a6e7b148de2eb18   running
+workload-cluster-md-0-56d9ccc8d8-txp5q   aws:////i-01596ec8c736d6f87   running
+```
+
+```cosnso
 
 ----------
 
@@ -559,11 +574,11 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMj
-EzODE0MjM4MiwtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2
-NDU2NzgsMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwND
-M5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQy
-OTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMTIzNzkxNz
-k2MCwtNzg5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3MTk1OSwt
-MTY4Njg1NzQxM119
+eyJoaXN0b3J5IjpbLTI3MTM0NzQ0NCwtMTYwNjQ1NTMyMiwxOT
+IyMzIyNzI5LC0yMTM4MTQyMzgyLC0xMjEyNDI1OTY0LC01NDEz
+MzQyNjQsLTY2ODY0NTY3OCwxMDkyMDkyMjAzLC01Mjk4MjM3MD
+gsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5NzIzMTMwOTksMTgw
+MTU2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Njk2OCwtOTE4MDgwNT
+E4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMwNjExNjYs
+MTA3NjcxOTU5XX0=
 -->
