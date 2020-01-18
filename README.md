@@ -53,7 +53,7 @@ Make sure the following packages are installed on the Ubuntu server and are up t
 
 * JQ
 * golang v1.13.4 at the time of writing of this doc.
-```console
+```shell
 sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get update
 sudo apt install golang
@@ -62,13 +62,14 @@ sudo apt install golang
 * curl
 * kubectl
 * kind
-```console
+```shell
 curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64
 chmod +x kind
 sudo mv kind /usr/local/bin
 ```
 * aws cli (v1 or v2) installed and configured to access your AWS account.
-* 
+
+Clone the stable release-0.4 branch that provides v1alpha2 support
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTk3NTgzODBdfQ==
+eyJoaXN0b3J5IjpbMTU0MDU1NjM5NF19
 -->
