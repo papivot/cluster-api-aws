@@ -552,17 +552,19 @@ Notice the state of the machine -
 
 ```shell
 kubectl get ma
-NAME                                     PROVIDERID                    PHASE
-workload-cluster-controlplane-0          aws:////i-09558d582b46da80b   running
-workload-cluster-controlplane-1          aws:////i-06543eae83b8a5378   running
-workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
-workload-cluster-controlplane-4          aws:////i-02dcb5b3fd5ada5aa   failed
-workload-cluster-md-0-56d9ccc8d8-dvrrj   aws:////i-0902f6ca5d2d21b1b   running
-workload-cluster-md-0-56d9ccc8d8-lsh4n   aws:////i-01a6e7b148de2eb18   running
-workload-cluster-md-0-56d9ccc8d8-txp5q   aws:////i-01596ec8c736d6f87   running
 ```
 
-```cosnso
+```console
+NAME                                     PROVIDERID                    PHASE
+...
+workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
+workload-cluster-controlplane-4          aws:////i-02dcb5b3fd5ada5aa   failed
+...
+```
+To cleanup, delete the failed machine. 
+
+```shell
+
 
 ----------
 
@@ -574,11 +576,11 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTI3MTM0NzQ0NCwtMTYwNjQ1NTMyMiwxOT
-IyMzIyNzI5LC0yMTM4MTQyMzgyLC0xMjEyNDI1OTY0LC01NDEz
-MzQyNjQsLTY2ODY0NTY3OCwxMDkyMDkyMjAzLC01Mjk4MjM3MD
-gsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5NzIzMTMwOTksMTgw
-MTU2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Njk2OCwtOTE4MDgwNT
-E4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMwNjExNjYs
-MTA3NjcxOTU5XX0=
+eyJoaXN0b3J5IjpbMTI1NzY2MDcxLC0xNjA2NDU1MzIyLDE5Mj
+IzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0MjU5NjQsLTU0MTMz
+NDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMDMsLTUyOTgyMzcwOC
+wtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3MjMxMzA5OSwxODAx
+NTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OTY4LC05MTgwODA1MT
+gsLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwtMTM0MzA2MTE2Niwx
+MDc2NzE5NTldfQ==
 -->
