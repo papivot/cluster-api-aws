@@ -52,7 +52,7 @@ This guide will use an upto date Ubuntu 18.04 server to run a management cluster
 Make sure the following packages are installed on the Ubuntu server and are up to date. 
 
 * JQ
-* golang v1.13.4 at the time of writing of this doc.
+* golang v1.13.4 at the time of writing  this doc.
 ```shell
 sudo add-apt-repository ppa:longsleep/golang-backports
 sudo apt-get update
@@ -80,8 +80,9 @@ make generate-examples
 
 Copy the generated **clusterawsadm** binary to /usr/local/bin
 ```shell
-cp 
+cp ./bin/clusterawsadm /usr/local/bin
 ```
+clusterawsadm alpha bootstrap create-stack
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTYwNDkxODE4NiwtMTY4Njg1NzQxM119
+eyJoaXN0b3J5IjpbMTEwOTE2OTMxNiwtMTY4Njg1NzQxM119
 -->
