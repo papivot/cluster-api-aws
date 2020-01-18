@@ -224,9 +224,15 @@ With this, the management cluster is now ready. You can now start deploying work
 * Step 1 - Creating the Cluster object
 
 ```shell
-
+kubectl apply -f ./examples/_out/cluster.yaml
 ```
+
+```console
+cluster.cluster.x-k8s.io/workload-cluster created
+awscluster.infrastructure.cluster.x-k8s.io/workload-cluster created
+```
+Validate within the AWS console that a new VPC with associated subnets, NAT gateway, security 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI3NTM1NTg0OSwtMTM0MzA2MTE2NiwxMD
-c2NzE5NTksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbLTEyNjM0Nzc2NzEsLTEzNDMwNjExNjYsMT
+A3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
