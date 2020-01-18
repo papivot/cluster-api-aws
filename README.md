@@ -123,14 +123,19 @@ export AWS_REGION="us-east-2"
 export CONTROL_PLANE_MACHINE_TYPE="t2.medium"
 export NODE_MACHINE_TYPE="t2.medium"
 ```
-
 Generate the sample yaml files that will be required to setup the management cluster (CRDs/controllers) and the files needed to setup the workload clusters. 
 
 ```shell
 make generate-examples
 ```
 All the yamls are generated in the `./example/_out` folder
+
+Create a Management cluster using `kind`
+
+```shell
+kind create cluster --name=clusterapi
+``` 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MDY5NDg2MzgsMTA3NjcxOTU5LC0xNj
-g2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbMTM4NjI3MTgwLDEwNzY3MTk1OSwtMTY4Nj
+g1NzQxM119
 -->
