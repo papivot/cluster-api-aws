@@ -416,7 +416,54 @@ For this demo, we will increase the worker node count back to 3 (in not already 
 
 #### Manually increasing the # of master nodes
 
-Since controle plane nodes are not managed by a machinedeployment, a new control plance machine object has to be created
+Since control plane nodes are not managed by a machinedeployment, a new control plane machine object has to be created similar to the yaml below. 
+
+```yaml
+apiVersion: bootstrap.cluster.x-k8s.io/v1alpha2
+kind: KubeadmConfig
+metadata:
+  name: workload-cluster-controlplane-3
+  namespace: default
+spec:
+  joinConfiguration:
+    controlPlane: {}
+    nodeRegistration:
+      kubeletExtraArgs:
+        cloud-provider: aws
+      name: '{{ ds.meta_data.hostname }}'
+---
+apiVersion: cluster.x-k8s.io/v1alpha2
+kind: Machine
+metadata:
+  labels:
+    cluster.x-k8s.io/cluster-name: workload-cluster
+    cluster.x-k8s.io/control-plane: "true"
+  name: workload-cluster-controlplane-3
+  namespace: default
+spec:
+  bootstrap:
+    configRef:
+      apiVersion: bootstrap.cluster.x-k8s.io/v1alpha2
+      kind: KubeadmConfig
+      name: workload-cluster-controlplane-3
+      namespace: default
+  infrastructureRef:
+    apiVersion: infrastructure.cluster.x-k8s.io/v1alpha2
+    kind: AWSMachine
+    name: workload-cluster-controlplane-3
+    namespace: default
+  version: v1.16.1
+---
+apiVersion: infrastructure.cluster.x-k8s.io/v1alpha2
+kind: AWSMachine
+metadata:
+  name: workload-cluster-controlplane-3
+  namespace: default
+spec:
+  iamInstanceProfile: control-plane.cluster-api-provider-aws.sigs.k8s.io
+  instanceType: t2.medium
+  sshKeyName: awsbastion
+```
 
 ----------
 
@@ -428,9 +475,9 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTI5MDUwMDgyNSwtMTEyODYyMDQzOSwtMz
-U3MDc2NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0
-OSwxOTYyNDc2OTY4LC05MTgwODA1MTgsLTEyMzc5MTc5NjAsLT
-c4OTA2OTUyNSwtMTM0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4
-NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbLTIxNDE2MzI5NTgsLTExMjg2MjA0MzksLT
+M1NzA3NjY0Nyw5NzIzMTMwOTksMTgwMTU2NjgzNSw4NDI5NzM5
+NDksMTk2MjQ3Njk2OCwtOTE4MDgwNTE4LC0xMjM3OTE3OTYwLC
+03ODkwNjk1MjUsLTEzNDMwNjExNjYsMTA3NjcxOTU5LC0xNjg2
+ODU3NDEzXX0=
 -->
