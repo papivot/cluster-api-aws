@@ -40,9 +40,9 @@ kubeadmconfigtemplates                         bootstrap.cluster.x-k8s.io       
 The controllers and apiservices are as follows - 
 
 ```console
-cluster-api-controller 			- v1alpha2.cluster.x-k8s.io
-cluster-api-aws-controller 		- v1alpha2.infrastructure.cluster.x-k8s.io
-cluster-api-kubeadm-controller 	- v1alpha2.bootstrap.cluster.x-k8s.io
+cluster-api-controller                  - v1alpha2.cluster.x-k8s.io
+cluster-api-aws-controller              - v1alpha2.infrastructure.cluster.x-k8s.io
+cluster-api-kubeadm-controller          - v1alpha2.bootstrap.cluster.x-k8s.io
 ```
 
 -----
@@ -218,6 +218,8 @@ capi-system          capi-controller-manager-66d98dc68f-jx5c5           1/1     
 
 With this, the management cluster is now ready. You can now start deploying workload-clusters by modifying/tweaking the other yaml files in the `./example/_out` folder. 
 
+
+
 ### Deploying Clusters (workload clusters)
 
 * Step 1 - Creating the Cluster object
@@ -332,6 +334,6 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwOTMyMDAwMDgsLTc4OTA2OTUyNSwtMT
-M0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbLTUyOTg2MTMxNCwtNzg5MDY5NTI1LC0xMz
+QzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
 -->
