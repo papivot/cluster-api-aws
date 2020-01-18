@@ -47,9 +47,12 @@ cluster-api-kubeadm-controller 	- v1alpha2.bootstrap.cluster.x-k8s.io
 ### Setup 
 This guide will use an upto date Ubuntu 18.04 server to run a management cluster. The  management cluster can be run on any K8s cluster. For simplicity sake, we will be using a simple K8s cluster deployed using `kind` . Once the management cluster is setup, it can be used to install and manage workload clusters.
 
-#### O
+#### Preparations
 
-* 
+Make sure the following packages are installed on the Ubuntu server and are up to date. 
+
+* JQ
+* golang
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDk5MjYwMjg2XX0=
+eyJoaXN0b3J5IjpbNDIyOTI0MzVdfQ==
 -->
