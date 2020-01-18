@@ -221,8 +221,12 @@ With this, the management cluster is now ready. You can now start deploying work
 
 ### Deploying Clusters (workload clusters)
 
+* Step 1 - Creating the Cluster object
 
+```shell
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4OTQwOTE0MjYsLTEzNDMwNjExNjYsMT
-A3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbMTI3NTM1NTg0OSwtMTM0MzA2MTE2NiwxMD
+c2NzE5NTksLTE2ODY4NTc0MTNdfQ==
 -->
