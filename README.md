@@ -434,7 +434,7 @@ workload-cluster-md-0-56d9ccc8d8-mw2cm   aws:////i-03fca5522a51dfe3a   failed
 workload-cluster-md-0-56d9ccc8d8-txp5q   aws:////i-01596ec8c736d6f87   running
 ```
 
-#### Manually increasing the # of master nodes
+#### Manually increasing the # of control plane nodes
 
 Since control plane nodes are not managed by a machinedeployment, a new control plane machine object has to be created similar to the yaml below. 
 
@@ -518,6 +518,10 @@ workload-cluster-controlplane-2          aws:////i-0ea2bf3d7fe0dc66f   running
 workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
 ...
 ```
+#### Manually decreasing the # of control plane nodes
+
+Since control plane nodes are not managed by a machinedeployment, a new control plane machine object has to be created similar to the yaml below. 
+
 
 
 ----------
@@ -530,9 +534,9 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODI2MDM5NDI4LC01Mjk4MjM3MDgsLTExMj
-g2MjA0MzksLTM1NzA3NjY0Nyw5NzIzMTMwOTksMTgwMTU2Njgz
-NSw4NDI5NzM5NDksMTk2MjQ3Njk2OCwtOTE4MDgwNTE4LC0xMj
-M3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMwNjExNjYsMTA3Njcx
-OTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0xMT
+I4NjIwNDM5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LDE4MDE1NjY4
+MzUsODQyOTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMT
+IzNzkxNzk2MCwtNzg5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3
+MTk1OSwtMTY4Njg1NzQxM119
 -->
