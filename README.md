@@ -568,7 +568,13 @@ kubectl delete ma workload-cluster-controlplane-4
 ```
 #### Accessing the EC2 instances
 
-Note the IP/Public DNS of the
+Note the IP/Public DNS of the bastion host associated with the cluster. For e.g. `ec2-[ip-address].us-east-2.compute.amazonaws.com`
+
+Use the ssh key that was references in the previous section to ssh into the bastion host. 
+
+```shell
+ssh -i 
+```
 
 
 ----------
@@ -581,11 +587,11 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAzNDI2OTIxLC0xNzAwNTUzMjMzLC0xNj
-A2NDU1MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0
-MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMD
-MsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3
-MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OT
-Y4LC05MTgwODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwt
-MTM0MzA2MTE2Nl19
+eyJoaXN0b3J5IjpbMTkxNjk2Nzg4OSwtMTcwMDU1MzIzMywtMT
+YwNjQ1NTMyMiwxOTIyMzIyNzI5LC0yMTM4MTQyMzgyLC0xMjEy
+NDI1OTY0LC01NDEzMzQyNjQsLTY2ODY0NTY3OCwxMDkyMDkyMj
+AzLC01Mjk4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5
+NzIzMTMwOTksMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Nj
+k2OCwtOTE4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUs
+LTEzNDMwNjExNjZdfQ==
 -->
