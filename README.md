@@ -209,7 +209,7 @@ capi-system          capi-controller-manager-66d98dc68f-jx5c5           1/1     
 With this, the management cluster is now ready. You can now start deploying workload-clusters by modifying/tweaking the other yaml files in the `./example/_out` folder. 
 
 ----
-### Deploying WorkClusters (workload clusters)
+### Deploying Workload Clusters 
 
 * Step 1 - Creating the Cluster object
 
@@ -297,7 +297,6 @@ kube-system   coredns-5644d7b6d9-r9mlv                                          
 kube-system   etcd-ip-10-0-0-18.us-east-2.compute.internal                       1/1     Running   0          9m43s
 ...
 ```
-
 * Step 5 - Deploy the worker nodes leveraging the cluster API.
 
 ```shell
@@ -558,7 +557,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MjY5ODk4MjEsLTIxMzgxNDIzODIsLT
+eyJoaXN0b3J5IjpbLTE0Mjg4NTM1NDYsLTIxMzgxNDIzODIsLT
 EyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIw
 OTIyMDMsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2Nj
 Q3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYy
