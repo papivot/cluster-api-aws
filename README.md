@@ -576,9 +576,17 @@ Use the ssh key that was references in the previous section to ssh into the bast
 ssh -i ssh -i [path/to]/awsbastion.pem ubuntu@ec2-ip-address.us-east-2.compute.amazonaws.com
 ```
 ```console
+The authenticity of host 'ec2-18-223-108-221.us-east-2.compute.amazonaws.com (18.223.108.221)' can't be established.
+ECDSA key fingerprint is SHA256:p9ffx8FX6LtmhNoAOUko5mGBYXK9F8tZh1TdfEcT7gI.
+Are you sure you want to continue connecting (yes/no)? yes
+Warning: Permanently added 'ec2-18-223-108-221.us-east-2.compute.amazonaws.com,18.223.108.221' (ECDSA) to the list of known hosts.
+Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1047-aws x86_64)
 
+ * Documentation:  https://help.ubuntu.com
+ * Management:     https://landscape.canonical.com
+...
 ```
-
+Once you are logged into the bastion host, you have to copy [scp or copy&paste] the ssh
 
 ----------
 
@@ -590,7 +598,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0NzA3NzQ4NCwtMTcwMDU1MzIzMywtMT
+eyJoaXN0b3J5IjpbLTU1MTIyNjY2NSwtMTcwMDU1MzIzMywtMT
 YwNjQ1NTMyMiwxOTIyMzIyNzI5LC0yMTM4MTQyMzgyLC0xMjEy
 NDI1OTY0LC01NDEzMzQyNjQsLTY2ODY0NTY3OCwxMDkyMDkyMj
 AzLC01Mjk4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5
