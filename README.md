@@ -77,7 +77,11 @@ make test # To validate everything works fine
 make binaries
 make generate-examples
 ```
+
+Copy the generated **clusterawsadm** binary to /usr/local/bin
+```shell
+cp 
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0MTMwMjE1MjAsLTE2ODY4NTc0MTNdfQ
-==
+eyJoaXN0b3J5IjpbLTYwNDkxODE4NiwtMTY4Njg1NzQxM119
 -->
