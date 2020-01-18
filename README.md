@@ -409,7 +409,7 @@ ip-10-0-0-244.us-east-2.compute.internal   Ready    <none>   15m4s   v1.16.1
 ip-10-0-0-18.us-east-2.compute.internal    Ready    master   15h     v1.16.1
 ...
 ```
-#### ~~Resurrection of a worker node~~ [this did now work as v1alpha2 does not support resurrection???]
+#### ~~Resurrection of a worker node~~ [this does now work as v1alpha2 does not support resurrection???]
 For this demo, we will increase the worker node count back to 3 (in not already done). This can per performed by the steps in the section `Manually increasing the # of worker nodes` Once the cluster has reached a steady state, and all the nodes are available in the cluster, terminate one of the **worker nodes** from the AWS ec2 console. 
 
 ~~When the controller next runs the reconciliation loop and sees a missing machine from the machineset, a new ec2 instance should be spawned and added to the workload cluster.~~
@@ -425,8 +425,8 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NzA3NjY0Nyw5NzIzMTMwOTksMTgwMT
-U2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Njk2OCwtOTE4MDgwNTE4
-LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMwNjExNjYsMT
-A3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5Nz
+IzMTMwOTksMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Njk2
+OCwtOTE4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLT
+EzNDMwNjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
