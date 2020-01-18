@@ -32,8 +32,9 @@ awsclusters                                    infrastructure.cluster.x-k8s.io  
 awsmachines                                    infrastructure.cluster.x-k8s.io   true         AWSMachine
 awsmachinetemplates                            infrastructure.cluster.x-k8s.io   true         AWSMachineTemplate
 ...
-kubeadmconfigs 					bootstrap.cluster.x-k8s.io true KubeadmConfig
-kubeadmconfigtemplates 			bootstrap.cluster.x-k8s.io true KubeadmConfigTemplate
+kubeadmconfigs                                 bootstrap.cluster.x-k8s.io        true         KubeadmConfig
+kubeadmconfigtemplates                         bootstrap.cluster.x-k8s.io        true         KubeadmConfigTemplate
+...
 ```
 
 The controllers and apiservices are as follows - 
@@ -215,7 +216,9 @@ capa-system          capa-controller-manager-57ff9959ff-zvt4w           1/1     
 capi-system          capi-controller-manager-66d98dc68f-jx5c5           1/1     Running   0          2m36s
 ...
 ```
+
+With this, the management cluster is now ready. You can now start deploying workload-clusters by modifying/tweaking the other yaml files in the `./example/_ou
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyNTMwMDc2MzAsLTEzNDMwNjExNjYsMT
-A3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbMTQ4Mjg1MTU3OCwtMTM0MzA2MTE2NiwxMD
+c2NzE5NTksLTE2ODY4NTc0MTNdfQ==
 -->
