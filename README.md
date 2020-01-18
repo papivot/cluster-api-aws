@@ -256,7 +256,17 @@ This may take a while - 10-15 mins.
 ```shell
 kubectl get secrets -n default workload-cluster-kubeconfig -o json |jq -r .data.value|base64 -d > /tmp/workload-cluster.conf
 ```
+The workload-cluster.conf file should be in a kubeconfig file format -
+
+```yaml
+apiVersion: v1
+clusters:
+- cluster:
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5ekNDQWJPZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01ERXhPREF6TXpBd01Gb1hEVE13TURFeE5UQXpNelV3TUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTFN5CjhLYy9lTVdCMzN2MXpaWVpkNjdubE8rd1oyUEN1Z0dIeXE0dTU3eDJ3YmJFcy9mRGpMVWZQOUJ1R1M5Ym4wY3QKeWthZVRrcGpyNk96dzRyR0E0dm1ZVUtLbFNkbXpUcC9LZElSUnFBa3ZCUHE5VGZPT3BZNmJ4cVR3QUVVYTB5Zwo1R0VHRm5JUWkwMW5zaEFyeitQS3VZUFNNSk5ML01aaThYSGt0cGVrVmtsMGhMUVZCcnlmUklwM3lnTk5LU1g3CjNMMVBnNmJuT1lybG5Ub1ZrcERnLzlxTXh3N0RqRzB6bDFQcFZOOHNlU1gzTEtHbjR0bUpjRjdKMGwrdTFvZ1cKaTFpOTNH
+    ...
+    
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5NTM4NzQxMSwtNzg5MDY5NTI1LC0xMz
+eyJoaXN0b3J5IjpbLTExNTAwNjY1OCwtNzg5MDY5NTI1LC0xMz
 QzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
 -->
