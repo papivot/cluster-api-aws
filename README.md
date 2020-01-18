@@ -209,7 +209,7 @@ capi-system          capi-controller-manager-66d98dc68f-jx5c5           1/1     
 With this, the management cluster is now ready. You can now start deploying workload-clusters by modifying/tweaking the other yaml files in the `./example/_out` folder. 
 
 ----
-### Deploying Clusters (workload clusters)
+### Deploying WorkClusters (workload clusters)
 
 * Step 1 - Creating the Cluster object
 
@@ -558,10 +558,11 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMzgxNDIzODIsLTEyMTI0MjU5NjQsLT
-U0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMDMsLTUyOTgy
-MzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3MjMxMzA5OS
-wxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OTY4LC05MTgw
-ODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwtMTM0MzA2MT
-E2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbLTE4MjY5ODk4MjEsLTIxMzgxNDIzODIsLT
+EyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIw
+OTIyMDMsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2Nj
+Q3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYy
+NDc2OTY4LC05MTgwODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2OT
+UyNSwtMTM0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNd
+fQ==
 -->
