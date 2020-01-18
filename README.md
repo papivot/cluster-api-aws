@@ -467,8 +467,9 @@ spec:
 Change the `instanceType`, `sshKeyName`, `K8s version` and other name references accordingly.  Once done apply the configuration file.
 
 ```shell
-
+kubectl apply -f ./examples/_out/addmasternode.yaml
 ```
+where `./examples/_out/addmasternode.yaml` is the name of the name of the newly created file. Once successfully completed, a new EC2 instance is created, kubeadm joins the node to the cluster as a master node. Validate it 
 
 ----------
 
@@ -480,9 +481,9 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbOTA0MjY3OTk5LC0xMTI4NjIwNDM5LC0zNT
-cwNzY2NDcsOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOTQ5
-LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMTIzNzkxNzk2MCwtNz
-g5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1
-NzQxM119
+eyJoaXN0b3J5IjpbLTQ4NTY3NTMwNSwtMTEyODYyMDQzOSwtMz
+U3MDc2NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0
+OSwxOTYyNDc2OTY4LC05MTgwODA1MTgsLTEyMzc5MTc5NjAsLT
+c4OTA2OTUyNSwtMTM0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4
+NTc0MTNdfQ==
 -->
