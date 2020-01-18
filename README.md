@@ -318,7 +318,18 @@ machinedeployment.cluster.x-k8s.io/workload-cluster-md-0 created
 awsmachinetemplate.infrastructure.cluster.x-k8s.io/workload-cluster-md-0 created
 ```
 In a short time, a machine deployment consisting of 2 machines (2 worker nodes) will be added to the cluster. 
+
+
+
+
+----------
+
+References - 
+
+1. [https://blog.scottlowe.org/2019/08/27/bootstrapping-a-kubernetes-cluster-on-aws-with-clusterapi/](https://blog.scottlowe.org/2019/08/27/bootstrapping-a-kubernetes-cluster-on-aws-with-clusterapi/)
+2. [https://cluster-api.sigs.k8s.io/tasks/installation.html](https://cluster-api.sigs.k8s.io/tasks/installation.html)
+3. [https://github.com/kubernetes-sigs/cluster-api-provider-aws/blob/v0.3.7/docs/getting-started.md](https://github.com/kubernetes-sigs/cluster-api-provider-aws/blob/v0.3.7/docs/getting-started.md)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA2NjQwNjA5OSwtNzg5MDY5NTI1LC0xMz
-QzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
+eyJoaXN0b3J5IjpbNjgyMTQ0MjExLC03ODkwNjk1MjUsLTEzND
+MwNjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
