@@ -450,6 +450,8 @@ workload-cluster-md-0-56d9ccc8d8-txp5q   aws:////i-01596ec8c736d6f87   running
 
 Since control plane nodes are not managed by a machinedeployment, a new control plane machine object has to be created similar to the yaml below. 
 
+Note: It was observed that reusing the machinenames caused problems. May be a bug that needs to be addressed. 
+
 ```yaml
 apiVersion: bootstrap.cluster.x-k8s.io/v1alpha2
 kind: KubeadmConfig
@@ -557,11 +559,11 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTkyMjMyMjcyOSwtMjEzODE0MjM4MiwtMT
-IxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5MjA5
-MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNzY2ND
-csOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOTQ5LDE5NjI0
-NzY5NjgsLTkxODA4MDUxOCwtMTIzNzkxNzk2MCwtNzg5MDY5NT
-I1LC0xMzQzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
-
+eyJoaXN0b3J5IjpbLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMj
+EzODE0MjM4MiwtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2
+NDU2NzgsMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwND
+M5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQy
+OTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMTIzNzkxNz
+k2MCwtNzg5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3MTk1OSwt
+MTY4Njg1NzQxM119
 -->
