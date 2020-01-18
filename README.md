@@ -328,11 +328,12 @@ should return something similar -
 ```console
 NAME                                       STATUS   ROLES    AGE     VERSION
 ip-10-0-0-158.us-east-2.compute.internal   Ready    <none>   5m30s   v1.16.1
-ip-10-0-0-18.us-east-2.compute.internal    Ready    master   18m     v1.16.1
 ip-10-0-0-19.us-east-2.compute.internal    Ready    <none>   5m17s   v1.16.1
+ip-10-0-0-18.us-east-2.compute.internal    Ready    master   18m     v1.16.1
 ip-10-0-0-200.us-east-2.compute.internal   Ready    master   19m     v1.16.1
 ip-10-0-0-35.us-east-2.compute.internal    Ready    master   18m     v1.16.1
 ```
+
 
 
 ----------
@@ -345,6 +346,6 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1OTI0MTE3NSwtNzg5MDY5NTI1LC0xMz
-QzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
+eyJoaXN0b3J5IjpbNzAyMTY0MTgzLC03ODkwNjk1MjUsLTEzND
+MwNjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
