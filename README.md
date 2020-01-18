@@ -409,6 +409,8 @@ ip-10-0-0-244.us-east-2.compute.internal   Ready    <none>   15m4s   v1.16.1
 ip-10-0-0-18.us-east-2.compute.internal    Ready    master   15h     v1.16.1
 ...
 ```
+#### Resurrection of a worker node
+For this demo, we will increase the worker node count back to 3 (in not already done). This can per performed by following the steps in the section `
 
 ----------
 
@@ -420,8 +422,8 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2Mj
-Q3Njk2OCwtOTE4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1
-MjUsLTEzNDMwNjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX
-0=
+eyJoaXN0b3J5IjpbNzk1Mzk2NzA2LDE4MDE1NjY4MzUsODQyOT
+czOTQ5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMTIzNzkxNzk2
+MCwtNzg5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3MTk1OSwtMT
+Y4Njg1NzQxM119
 -->
