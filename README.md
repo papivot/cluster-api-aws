@@ -432,7 +432,7 @@ workload-cluster-md-0-56d9ccc8d8-lsh4n   aws:////i-01a6e7b148de2eb18   running
 workload-cluster-md-0-56d9ccc8d8-mw2cm   aws:////i-03fca5522a51dfe3a   failed
 workload-cluster-md-0-56d9ccc8d8-txp5q   aws:////i-01596ec8c736d6f87   running
 ```
-Deleting the failed machine forced the cluster-api to kickstart a new machine provisioning and restore the state of the machinedeployment back to the correct number of clusters. 
+Deleting the failed machine forced the cluster-api to kickstart a new machine provisioning and restore the state of the machinedeployment back to the correct number of worker nodes. 
 
 ```shell
 kubectl delete ma workload-cluster-md-0-56d9ccc8d8-mw2cm
@@ -557,7 +557,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM0MDA5ODg3OSwtMjEzODE0MjM4MiwtMT
+eyJoaXN0b3J5IjpbMTkyMjMyMjcyOSwtMjEzODE0MjM4MiwtMT
 IxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5MjA5
 MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNzY2ND
 csOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOTQ5LDE5NjI0
