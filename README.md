@@ -20,7 +20,7 @@ kubeadmconfigs.bootstrap.cluster.x-k8s.io
 kubeadmconfigtemplates.bootstrap.cluster.x-k8s.io
 ```
 
-Users have access to the following api resources -
+Users get access to the following api resources -
 ```console
 NAME                              SHORTNAMES   APIGROUP                          NAMESPACED   KIND
 clusters                          cl           cluster.x-k8s.io                  true         Cluster
@@ -217,8 +217,12 @@ capi-system          capi-controller-manager-66d98dc68f-jx5c5           1/1     
 ...
 ```
 
-With this, the management cluster is now ready. You can now start deploying workload-clusters by modifying/tweaking the other yaml files in the `./example/_ou
+With this, the management cluster is now ready. You can now start deploying workload-clusters by modifying/tweaking the other yaml files in the `./example/_out` folder. 
+
+### Deploying Clusters (workload clusters)
+
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTQ4Mjg1MTU3OCwtMTM0MzA2MTE2NiwxMD
-c2NzE5NTksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbLTE4OTQwOTE0MjYsLTEzNDMwNjExNjYsMT
+A3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
