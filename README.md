@@ -205,16 +205,16 @@ Make sure that the new controllers are in a running state -
 kubectl get pods --all-namespaces
 ```
 
-should return similar to this - 
+should return similar to this. The `capi-system`,`capa-system` and `cabpk-system` are the new namespaces with the controllers running in them - 
 
 ```console
 NAMESPACE            NAME                                               READY   STATUS    RESTARTS   AGE
 cabpk-system         cabpk-controller-manager-6dcc9b8b96-5lxm6          2/2     Running   0          2m36s
 capa-system          capa-controller-manager-57ff9959ff-zvt4w           1/1     Running   0          2m36s
 capi-system          capi-controller-manager-66d98dc68f-jx5c5           1/1     Running   0          2m36s
-kube-system          coredns-6955765f44-92gc8                           1/1     Running   0          7m33s
+...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMDA0NTc1MTMsLTEzNDMwNjExNjYsMT
-A3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbMjA0MjU0NTI1OSwtMTM0MzA2MTE2NiwxMD
+c2NzE5NTksLTE2ODY4NTc0MTNdfQ==
 -->
