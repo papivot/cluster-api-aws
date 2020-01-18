@@ -275,19 +275,30 @@ contexts:
 kubectl --kubeconfig=/tmp/workload-cluster.conf apply -f ./examples/addons.yaml
 ```
 
-This shoudl deploy the required addon objects in the workload cluster -
+This should deploy the required addon objects in the workload cluster -
 
 ```console
 configmap/calico-config created
 customresourcedefinition.apiextensions.k8s.io/felixconfigurations.crd.projectcalico.org created
-...clusterrole.rbac.authorization.k8s.io/calico-node created
+...
+clusterrole.rbac.authorization.k8s.io/calico-node created
 clusterrolebinding.rbac.authorization.k8s.io/calico-node created
 daemonset.apps/calico-node created
 serviceaccount/calico-node created
 deployment.apps/calico-kube-controllers created
 serviceaccount/calico-kube-controllers created
 ```
+
+Validate all the pods are successfully running. 
+
+```shell
+kubectl --kubeconfig=/tmp/workload-cluster.conf get pods --all-namespaces
+```
+
+```console
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDMzMTM2MTI5LC03ODkwNjk1MjUsLTEzND
+eyJoaXN0b3J5IjpbNTAzMjcxMjIzLC03ODkwNjk1MjUsLTEzND
 MwNjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
