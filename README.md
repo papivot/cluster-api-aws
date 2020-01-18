@@ -532,7 +532,12 @@ workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
 ```
 #### Manually decreasing the # of control plane nodes
 
-Since control plane nodes are not managed by a machinedeployment, a control plane machine object and its associated references would need to be deleted. [check if there is a better way].In this example, we will delete the `workload-cluster-controlplane-2` machine and its associated AWSMachine 
+Since control plane nodes are not managed by a machinedeployment, a control plane machine object and its associated references would need to be deleted. [check if there is a better way].In this example, we will delete the `workload-cluster-controlplane-2` machine and its associated AWSMachine `workload-cluster-controlplane-2` and KubeadmConfig `workload-cluster-controlplane-2`
+
+```shell
+
+
+```
 
 
 
@@ -546,7 +551,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxMDMzNjMxOCwtNjY4NjQ1Njc4LDEwOT
+eyJoaXN0b3J5IjpbLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOT
 IwOTIyMDMsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2
 NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOT
 YyNDc2OTY4LC05MTgwODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2
