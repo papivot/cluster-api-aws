@@ -491,6 +491,23 @@ ip-10-0-0-35.us-east-2.compute.internal    Ready    master   16h   v1.16.1
 ...
 ```
 
+Notice the machines in the management cluster - 
+
+```shell
+kubectl get ma -n default
+```
+
+```console
+kubectl get ma -n default
+NAME                                     PROVIDERID                    PHASE
+workload-cluster-controlplane-0          aws:////i-09558d582b46da80b   running
+workload-cluster-controlplane-1          aws:////i-06543eae83b8a5378   running
+workload-cluster-controlplane-2          aws:////i-0ea2bf3d7fe0dc66f   running
+workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
+...
+```
+
+
 ----------
 
 References - 
@@ -501,7 +518,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU4ODY3NjUxOSwtNTI5ODIzNzA4LC0xMT
+eyJoaXN0b3J5IjpbMjExMDM2NjA5NywtNTI5ODIzNzA4LC0xMT
 I4NjIwNDM5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LDE4MDE1NjY4
 MzUsODQyOTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMT
 IzNzkxNzk2MCwtNzg5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3
