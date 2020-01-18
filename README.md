@@ -61,7 +61,13 @@ sudo apt install golang
 * git
 * curl
 * kubectl
-* 
+* kind
+```console
+curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0/kind-linux-amd64
+chmod +x kind
+sudo mv kind /usr/local/bin
+```
+* aws cli (v
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNDE4NTY1MDczXX0=
+eyJoaXN0b3J5IjpbLTgzODQ4ODQ2NF19
 -->
