@@ -433,6 +433,10 @@ workload-cluster-md-0-56d9ccc8d8-lsh4n   aws:////i-01a6e7b148de2eb18   running
 workload-cluster-md-0-56d9ccc8d8-mw2cm   aws:////i-03fca5522a51dfe3a   failed
 workload-cluster-md-0-56d9ccc8d8-txp5q   aws:////i-01596ec8c736d6f87   running
 ```
+Deleting the failed machine forced the cluster-api to kickstart a new machine provisioning and restore the state of the machinedeployment back to the correct number of clusters. 
+
+```shell
+
 
 #### Manually increasing the # of control plane nodes
 
@@ -534,9 +538,9 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0xMT
-I4NjIwNDM5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LDE4MDE1NjY4
-MzUsODQyOTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMT
-IzNzkxNzk2MCwtNzg5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3
-MTk1OSwtMTY4Njg1NzQxM119
+eyJoaXN0b3J5IjpbMTI0NzU4MjY4NiwxMDkyMDkyMjAzLC01Mj
+k4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5NzIzMTMw
+OTksMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Njk2OCwtOT
+E4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMw
+NjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
