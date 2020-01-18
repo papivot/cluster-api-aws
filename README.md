@@ -67,7 +67,8 @@ curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0
 chmod +x kind
 sudo mv kind /usr/local/bin
 ```
-* aws cli (v
+* aws cli (v1 or v2) installed and configured to access your AWS account.
+* 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgzODQ4ODQ2NF19
+eyJoaXN0b3J5IjpbLTE5OTk3NTgzODBdfQ==
 -->
