@@ -112,7 +112,7 @@ This completes the preliminary steps required to setup the environment. These st
 
 #### Setting up the Management Cluster 
 
-Export the following environment variables. These variables ***can be modified as per the requirements***. 
+Export the following environment variables. These variables ***should be modified as per the requirements***. 
 
 ```console
 export AWS_CREDENTIALS=$(aws iam create-access-key --user-name bootstrapper.cluster-api-provider-aws.sigs.k8s.io)
@@ -164,10 +164,7 @@ should return something similar (with all PODS in a `Running` state)
 NAMESPACE            NAME                                               READY   STATUS    RESTARTS   AGE
 kube-system          coredns-6955765f44-92gc8                           1/1     Running   0          104s
 kube-system          coredns-6955765f44-snqhv                           1/1     Running   0          104s
-kube-system          etcd-clusterapi-control-plane                      1/1     Running   0          2m1s
-kube-system          kindnet-4h8qx                                      1/1     Running   0          104s
-kube-system          kube-apiserver-clusterapi-control-plane            1/1     Running   0          2m1s
-kube-system          kube-controller-manager-clusterapi-control-plane   1/1     Running   0          2m
+...
 kube-system          kube-proxy-5mqvv                                   1/1     Running   0          104s
 kube-system          kube-scheduler-clusterapi-control-plane            1/1     Running   0          2m
 local-path-storage   local-path-provisioner-7745554f7f-ktlj5            1/1     Running   0          104s
@@ -341,6 +338,6 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNDc0ODA1MiwtNzg5MDY5NTI1LC0xMz
-QzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
+eyJoaXN0b3J5IjpbLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwtMT
+M0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNdfQ==
 -->
