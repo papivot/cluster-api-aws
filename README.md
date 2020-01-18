@@ -331,7 +331,7 @@ This is as simple as increasing the replica count of the machinedeployments obje
 
 ```shell
 kubectl get md -n default
-kubectl edit md workload-cluster-md-0 -o yaml
+kubectl edit md workload-cluster-md-0
 ```
 Increase the `replica` from 2 to 3 and save the file (in this example)
 
@@ -374,7 +374,7 @@ This is as simple as decreasing the replica count of the machinedeployments obje
 
 ```shell
 kubectl get md -n default
-kubectl edit md workload-cluster-md-0 -o yaml
+kubectl edit md workload-cluster-md-0
 ```
 Increase the `replica` from 3 to 2 and save the file (in this example)
 
@@ -420,7 +420,8 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODQyOTczOTQ5LDE5NjI0NzY5NjgsLTkxOD
-A4MDUxOCwtMTIzNzkxNzk2MCwtNzg5MDY5NTI1LC0xMzQzMDYx
-MTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
+eyJoaXN0b3J5IjpbMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2Mj
+Q3Njk2OCwtOTE4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1
+MjUsLTEzNDMwNjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX
+0=
 -->
