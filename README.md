@@ -414,6 +414,9 @@ For this demo, we will increase the worker node count back to 3 (in not already 
 
 ~~When the controller next runs the reconciliation loop and sees a missing machine from the machineset, a new ec2 instance should be spawned and added to the workload cluster.~~
 
+#### Manually increasing the # of master nodes
+
+Since controle plane nodes are not managed by a machinedeployment, a new control plance machine object has to be created
 
 ----------
 
@@ -425,8 +428,9 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5Nz
-IzMTMwOTksMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Njk2
-OCwtOTE4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLT
-EzNDMwNjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbMTI5MDUwMDgyNSwtMTEyODYyMDQzOSwtMz
+U3MDc2NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0
+OSwxOTYyNDc2OTY4LC05MTgwODA1MTgsLTEyMzc5MTc5NjAsLT
+c4OTA2OTUyNSwtMTM0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4
+NTc0MTNdfQ==
 -->
