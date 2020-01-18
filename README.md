@@ -69,7 +69,14 @@ sudo mv kind /usr/local/bin
 ```
 * aws cli (v1 or v2) installed and configured to access your AWS account.
 
-Clone the stable release-0.4 branch that provides v1alpha2 support
+#### Clone the stable release-0.4 branch that provides v1alpha2 support 
+```shell
+git clone https://github.com/kubernetes-sigs/cluster-api-provider-aws.git --branch release-0.4
+cd cluster-api-provider-aws
+make test # To validate everything works fine
+make binaries
+make generate-examples
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTU0MDU1NjM5NF19
+eyJoaXN0b3J5IjpbLTE2ODY4NTc0MTNdfQ==
 -->
