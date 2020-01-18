@@ -312,11 +312,13 @@ kube-system   etcd-ip-10-0-0-18.us-east-2.compute.internal                      
 ```shell
 kubectl apply -f ./examples/_out/machinedeployment.yaml
 ```
-
 ```console
-
+kubeadmconfigtemplate.bootstrap.cluster.x-k8s.io/workload-cluster-md-0 created
+machinedeployment.cluster.x-k8s.io/workload-cluster-md-0 created
+awsmachinetemplate.infrastructure.cluster.x-k8s.io/workload-cluster-md-0 created
 ```
+In a short time, a machine deployment consisting of 2 machines (2 worker nodes) will be added to the cluster. 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQwMDM1MjU1NSwtNzg5MDY5NTI1LC0xMz
+eyJoaXN0b3J5IjpbMTA2NjQwNjA5OSwtNzg5MDY5NTI1LC0xMz
 QzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
 -->
