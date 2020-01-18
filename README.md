@@ -187,11 +187,6 @@ customresourcedefinition.apiextensions.k8s.io/awsclusters.infrastructure.cluster
 customresourcedefinition.apiextensions.k8s.io/awsmachines.infrastructure.cluster.x-k8s.io created
 customresourcedefinition.apiextensions.k8s.io/awsmachinetemplates.infrastructure.cluster.x-k8s.io created
 customresourcedefinition.apiextensions.k8s.io/clusters.cluster.x-k8s.io created
-customresourcedefinition.apiextensions.k8s.io/kubeadmconfigs.bootstrap.cluster.x-k8s.io created
-customresourcedefinition.apiextensions.k8s.io/kubeadmconfigtemplates.bootstrap.cluster.x-k8s.io created
-customresourcedefinition.apiextensions.k8s.io/machinedeployments.cluster.x-k8s.io created
-customresourcedefinition.apiextensions.k8s.io/machines.cluster.x-k8s.io created
-customresourcedefinition.apiextensions.k8s.io/machinesets.cluster.x-k8s.io created
 ...
 secret/capa-manager-bootstrap-credentials created
 service/cabpk-controller-manager-metrics-service created
@@ -231,7 +226,7 @@ kubectl apply -f ./examples/_out/cluster.yaml
 cluster.cluster.x-k8s.io/workload-cluster created
 awscluster.infrastructure.cluster.x-k8s.io/workload-cluster created
 ```
-Validate within the AWS console that a new VPC with associated subnets, NAT gateway, security groups, LB, a bastion server etc has been created. This should take approx. 10 mins. 
+Validate within the AWS console that a new VPC with associated subnets, NAT gateway, security groups, LB, a bastion server and other objects has been created. This should take approx. 10 mins. 
 
 * Step 2 - Creating the control plane machines. 3 nodes in this example. 
 
@@ -346,6 +341,6 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEzNjk3Nzg0ODQsLTc4OTA2OTUyNSwtMT
-M0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbMjAwNDc0ODA1MiwtNzg5MDY5NTI1LC0xMz
+QzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
 -->
