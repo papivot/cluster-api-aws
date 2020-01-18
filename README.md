@@ -22,15 +22,16 @@ kubeadmconfigtemplates.bootstrap.cluster.x-k8s.io
 
 Users have access to the following api resources -
 ```console
-clusters 				cl 		cluster.x-k8s.io 	true 	Cluster
-machinedeployments 		md 		cluster.x-k8s.io 	true 	MachineDeployment
-machines 				ma 		cluster.x-k8s.io 	true 	Machine
-machinesets 			ms 		cluster.x-k8s.io 	true 	MachineSet
-
-awsclusters 					infrastructure.cluster.x-k8s.io true AWSCluster
-awsmachines 					infrastructure.cluster.x-k8s.io true AWSMachine
-awsmachinetemplates 			infrastructure.cluster.x-k8s.io true AWSMachineTemplate
-
+NAME                              SHORTNAMES   APIGROUP                          NAMESPACED   KIND
+clusters                          cl           cluster.x-k8s.io                  true         Cluster
+machinedeployments                md           cluster.x-k8s.io                  true         MachineDeployment
+machines                          ma           cluster.x-k8s.io                  true         Machine
+machinesets                       ms           cluster.x-k8s.io                  true         MachineSet
+...
+awsclusters                                    infrastructure.cluster.x-k8s.io   true         AWSCluster
+awsmachines                                    infrastructure.cluster.x-k8s.io   true         AWSMachine
+awsmachinetemplates                            infrastructure.cluster.x-k8s.io   true         AWSMachineTemplate
+...
 kubeadmconfigs 					bootstrap.cluster.x-k8s.io true KubeadmConfig
 kubeadmconfigtemplates 			bootstrap.cluster.x-k8s.io true KubeadmConfigTemplate
 ```
@@ -215,6 +216,6 @@ capi-system          capi-controller-manager-66d98dc68f-jx5c5           1/1     
 ...
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA0MjU0NTI1OSwtMTM0MzA2MTE2NiwxMD
-c2NzE5NTksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbLTEyNTMwMDc2MzAsLTEzNDMwNjExNjYsMT
+A3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
