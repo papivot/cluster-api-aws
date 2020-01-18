@@ -249,8 +249,14 @@ awsmachine.infrastructure.cluster.x-k8s.io/workload-cluster-controlplane-1 creat
 awsmachine.infrastructure.cluster.x-k8s.io/workload-cluster-controlplane-2 created
 ```
 
-This may take a while - 10-15 mins. Once this is complete, we need to grab the kubeconfig file that was associated with this workload server. The kubeconfig is stored as a secret in the namespace associated with the cluster (default in this example). This will allow us to connect to the cluster. 
+This may take a while - 10-15 mins. 
+
+* Step 3 - Once this is complete, we need to grab the kubeconfig file that was associated with this workload server. The kubeconfig is stored as a secret in the namespace associated with the cluster (default in this example). This will allow us to connect to the cluster. 
+
+```shell
+kubectl get secrets -n default workload-cluster-kubeconfig -o json |jq -r .data.value|base64 -d > /tmp/workload-cluster.conf
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMzE1MTIxNDUyLC03ODkwNjk1MjUsLTEzND
-MwNjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbMTA5NTM4NzQxMSwtNzg5MDY5NTI1LC0xMz
+QzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
 -->
