@@ -233,10 +233,24 @@ awscluster.infrastructure.cluster.x-k8s.io/workload-cluster created
 ```
 Validate within the AWS console that a new VPC with associated subnets, NAT gateway, security groups and a bastion server has been created. This should take approx. 10 mins. 
 
-* Step 2 - Creating the control plane machines. 
+* Step 2 - Creating the control plane machines. 3 nodes in this example. 
 
+```shell
+kubectl apply -f ./examples/_out/controlplane.yaml
+```
 
+```console
+kubeadmconfig.bootstrap.cluster.x-k8s.io/workload-cluster-controlplane-0 created
+kubeadmconfig.bootstrap.cluster.x-k8s.io/workload-cluster-controlplane-1 created
+kubeadmconfig.bootstrap.cluster.x-k8s.io/workload-cluster-controlplane-2 created
+machine.cluster.x-k8s.io/workload-cluster-controlplane-0 created
+machine.cluster.x-k8s.io/workload-cluster-controlplane-1 created
+machine.cluster.x-k8s.io/workload-cluster-controlplane-2 created
+awsmachine.infrastructure.cluster.x-k8s.io/workload-cluster-controlplane-0 created
+awsmachine.infrastructure.cluster.x-k8s.io/workload-cluster-controlplane-1 created
+awsmachine.infrastructure.cluster.x-k8s.io/workload-cluster-controlplane-2 created
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4NDQ0OTI5NjIsLTEzNDMwNjExNjYsMT
-A3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbLTc4OTA2OTUyNSwtMTM0MzA2MTE2NiwxMD
+c2NzE5NTksLTE2ODY4NTc0MTNdfQ==
 -->
