@@ -35,12 +35,20 @@ kubeadmconfigs 					bootstrap.cluster.x-k8s.io true KubeadmConfig
 kubeadmconfigtemplates 			bootstrap.cluster.x-k8s.io true KubeadmConfigTemplate
 ```
 
-The controllers and and apiservices are as follows - 
+The controllers and apiservices are as follows - 
 
 ```
-cluster-api-controller - v1alpha2.cluster.x-k8s.io
-cluster-api-aws-controller - v1alpha2.infrastructure.cluster.x-k8s.io
+cluster-api-controller 			- v1alpha2.cluster.x-k8s.io
+cluster-api-aws-controller 		- v1alpha2.infrastructure.cluster.x-k8s.io
+cluster-api-kubeadm-controller 	- v1alpha2.bootstrap.cluster.x-k8s.io
 ```
+
+-----
+### Setup 
+
+#### One time install and configuration
+
+* 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODgzMDk0MzQxXX0=
+eyJoaXN0b3J5IjpbMjA4NDA3NjEzOV19
 -->
