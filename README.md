@@ -218,8 +218,7 @@ capi-system          capi-controller-manager-66d98dc68f-jx5c5           1/1     
 
 With this, the management cluster is now ready. You can now start deploying workload-clusters by modifying/tweaking the other yaml files in the `./example/_out` folder. 
 
-
-
+----
 ### Deploying Clusters (workload clusters)
 
 * Step 1 - Creating the Cluster object
@@ -321,7 +320,19 @@ awsmachinetemplate.infrastructure.cluster.x-k8s.io/workload-cluster-md-0 created
 ```
 In a short time, a machine deployment consisting of 2 machines (2 worker nodes) will be added to the cluster. 
 
+```shell
+kubectl --kubeconfig=/tmp/workload-cluster.conf get nodes
+```
+should return something similar - 
 
+```console
+NAME                                       STATUS   ROLES    AGE     VERSION
+ip-10-0-0-158.us-east-2.compute.internal   Ready    <none>   5m30s   v1.16.1
+ip-10-0-0-18.us-east-2.compute.internal    Ready    master   18m     v1.16.1
+ip-10-0-0-19.us-east-2.compute.internal    Ready    <none>   5m17s   v1.16.1
+ip-10-0-0-200.us-east-2.compute.internal   Ready    master   19m     v1.16.1
+ip-10-0-0-35.us-east-2.compute.internal    Ready    master   18m     v1.16.1
+```
 
 
 ----------
@@ -334,6 +345,6 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUyOTg2MTMxNCwtNzg5MDY5NTI1LC0xMz
+eyJoaXN0b3J5IjpbLTM1OTI0MTE3NSwtNzg5MDY5NTI1LC0xMz
 QzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
 -->
