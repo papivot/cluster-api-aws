@@ -586,7 +586,7 @@ Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1047-aws x86_64)
  * Management:     https://landscape.canonical.com
 ...
 ```
-Once you are logged into the bastion host, you have to copy [scp or copy&paste] the ssh
+Once you are logged into the bastion host, you have to copy [scp or copy&paste] the above ssh key to the bastion host. Save it as a .pem file and set the access mode 
 
 ----------
 
@@ -598,11 +598,11 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTU1MTIyNjY2NSwtMTcwMDU1MzIzMywtMT
-YwNjQ1NTMyMiwxOTIyMzIyNzI5LC0yMTM4MTQyMzgyLC0xMjEy
-NDI1OTY0LC01NDEzMzQyNjQsLTY2ODY0NTY3OCwxMDkyMDkyMj
-AzLC01Mjk4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5
-NzIzMTMwOTksMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Nj
-k2OCwtOTE4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUs
-LTEzNDMwNjExNjZdfQ==
+eyJoaXN0b3J5IjpbLTE5OTY0ODQ4ODcsLTE3MDA1NTMyMzMsLT
+E2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4MiwtMTIx
+MjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5MjA5Mj
+IwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNzY2NDcs
+OTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOTQ5LDE5NjI0Nz
+Y5NjgsLTkxODA4MDUxOCwtMTIzNzkxNzk2MCwtNzg5MDY5NTI1
+LC0xMzQzMDYxMTY2XX0=
 -->
