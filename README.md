@@ -536,9 +536,34 @@ Since control plane nodes are not managed by a machinedeployment, a control plan
 
 ```shell
 kubectl delete ma workload-cluster-controlplane-2
-
 ```
-
+execute to following to validate that the objects have been removed and EC2 instance has been terminated in the AWS console.
+```she
+kubectl get ma
+NAME                                     PROVIDERID                    PHASE
+workload-cluster-controlplane-0          aws:////i-09558d582b46da80b   running
+workload-cluster-controlplane-1          aws:////i-06543eae83b8a5378   running
+workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
+workload-cluster-md-0-56d9ccc8d8-dvrrj   aws:////i-0902f6ca5d2d21b1b   running
+workload-cluster-md-0-56d9ccc8d8-lsh4n   aws:////i-01a6e7b148de2eb18   running
+workload-cluster-md-0-56d9ccc8d8-txp5q   aws:////i-01596ec8c736d6f87   running
+kubectl get AWSMachine
+NAME                              AGE
+workload-cluster-controlplane-0   17h
+workload-cluster-controlplane-1   17h
+workload-cluster-controlplane-3   41m
+workload-cluster-md-0-2g8dp       18m
+workload-cluster-md-0-5x69f       104m
+workload-cluster-md-0-jtq45       84m
+kubectl get KubeadmConfig
+NAME                              AGE
+workload-cluster-controlplane-0   17h
+workload-cluster-controlplane-1   17h
+workload-cluster-controlplane-3   41m
+workload-cluster-md-0-7mtbn       18m
+workload-cluster-md-0-fxx2p       105m
+workload-cluster-md-0-m5nqj       84m
+```
 
 
 ----------
@@ -551,7 +576,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5MzYxOTA1NCwtNTQxMzM0MjY0LC02Nj
+eyJoaXN0b3J5IjpbMTQ2MTUzNTUzMCwtNTQxMzM0MjY0LC02Nj
 g2NDU2NzgsMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIw
 NDM5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LDE4MDE1NjY4MzUsOD
 QyOTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMTIzNzkx
