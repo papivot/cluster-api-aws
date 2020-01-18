@@ -331,8 +331,42 @@ This is as simple as increasing the replica count of the machinedeployments obje
 
 ```shell
 kubectl get md -n default
-
+kubectl edit md workload-cluster-md-0 -o yaml
 ```
+increase the `replica` from 2 to 3 and save the file
+
+```yaml
+# Please edit the object below. Lines beginning with a '#' will be ignored,
+# and an empty file will abort the edit. If an error occurs while saving this file will be
+# reopened with the relevant failures.
+#
+apiVersion: cluster.x-k8s.io/v1alpha2
+kind: MachineDeployment
+metadata:
+  annotations:
+    kubectl.kubernetes.io/last-applied-configuration: |
+      {"apiVersion":"cluster.x-k8s.io/v1alpha2","kind":"MachineDeployment","metadata":{"annotations":{},"labels":{"cluster.x-k8s.io/cluster-name":"workload-cluster","nodepool":"nodepool-0"},"name":"workload-cluster-md-0","namespace":"default"},"spec":{"replicas":2,"selector":{"matchLabels":{"cluster.x-k8s.io/cluster-name":"workload-cluster","nodepool":"nodepool-0"}},"template":{"metadata":{"labels":{"cluster.x-k8s.io/cluster-name":"workload-cluster","nodepool":"nodepool-0"}},"spec":{"bootstrap":{"configRef":{"apiVersion":"bootstrap.cluster.x-k8s.io/v1alpha2","kind":"KubeadmConfigTemplate","name":"workload-cluster-md-0","namespace":"default"}},"infrastructureRef":{"apiVersion":"infrastructure.cluster.x-k8s.io/v1alpha2","kind":"AWSMachineTemplate","name":"workload-cluster-md-0","namespace":"default"},"version":"v1.16.1"}}}}
+    machinedeployment.clusters.k8s.io/revision: "1"
+  creationTimestamp: "2020-01-18T03:49:32Z"
+  generation: 3
+  labels:
+    cluster.x-k8s.io/cluster-name: workload-cluster
+    nodepool: nodepool-0
+  name: workload-cluster-md-0
+  namespace: default
+  ownerReferences:
+  - apiVersion: cluster.x-k8s.io/v1alpha2
+    kind: Cluster
+    name: workload-cluster
+    uid: 48e218c7-32ff-408e-ae08-b8c6b963f333
+  resourceVersion: "243536"
+  selfLink: /apis/cluster.x-k8s.io/v1alpha2/namespaces/default/machinedeployments/workload-cluster-md-0
+  uid: 89cd2a85-f825-4491-9c18-87dd31aa1857
+spec:
+  minReadySeconds: 0
+  progressDeadlineSeconds: 600
+  replicas: 3
+``` 
 
 
 ----------
@@ -345,7 +379,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTY2MzkwMDgsMTk2MjQ3Njk2OCwtOT
+eyJoaXN0b3J5IjpbLTE2NDAwNzExMDgsMTk2MjQ3Njk2OCwtOT
 E4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMw
 NjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
