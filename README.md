@@ -47,7 +47,7 @@ cluster-api-kubeadm-controller          - v1alpha2.bootstrap.cluster.x-k8s.io
 
 -----
 ### Setup 
-This guide will use an upto date Ubuntu 18.04 server to run a management cluster. The  management cluster can be run on any K8s cluster. For simplicity sake, we will be using a simple K8s cluster deployed using `kind` . Once the management cluster is setup, it can be used to install and manage workload clusters.
+This guide will use an upto date Ubuntu 18.04 server to run a management cluster (the  management cluster can be run on any K8s cluster (pivoting)). For simplicity sake, we will be using a simple K8s cluster, deployed using `kind`. Once the management cluster is setup, it can be used to install and manage workload clusters.
 
 #### Preparations
 
@@ -338,6 +338,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwtMT
-M0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbLTE3MjQ0NjAxMDIsLTEyMzc5MTc5NjAsLT
+c4OTA2OTUyNSwtMTM0MzA2MTE2NiwxMDc2NzE5NTksLTE2ODY4
+NTc0MTNdfQ==
 -->
