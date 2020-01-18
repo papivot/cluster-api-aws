@@ -135,7 +135,13 @@ Create a Management cluster using `kind`
 ```shell
 kind create cluster --name=clusterapi
 ``` 
+In a few minutes, the management cluster is instantiated in the Ubuntu server!!!
+
+```console
+
+
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTM4NjI3MTgwLDEwNzY3MTk1OSwtMTY4Nj
-g1NzQxM119
+eyJoaXN0b3J5IjpbLTEzMzQ5ODcwMzMsMTA3NjcxOTU5LC0xNj
+g2ODU3NDEzXX0=
 -->
