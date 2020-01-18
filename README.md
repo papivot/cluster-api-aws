@@ -333,7 +333,7 @@ This is as simple as increasing the replica count of the machinedeployments obje
 kubectl get md -n default
 kubectl edit md workload-cluster-md-0 -o yaml
 ```
-increase the `replica` from 2 to 3 and save the file
+Increase the `replica` from 2 to 3 and save the file (in this example)
 
 ```yaml
 # Please edit the object below. Lines beginning with a '#' will be ignored,
@@ -382,7 +382,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE0NDY5NjI4NjUsMTk2MjQ3Njk2OCwtOT
+eyJoaXN0b3J5IjpbLTE2Nzc1OTEyNjMsMTk2MjQ3Njk2OCwtOT
 E4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMw
 NjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
