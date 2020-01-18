@@ -191,22 +191,7 @@ customresourcedefinition.apiextensions.k8s.io/kubeadmconfigtemplates.bootstrap.c
 customresourcedefinition.apiextensions.k8s.io/machinedeployments.cluster.x-k8s.io created
 customresourcedefinition.apiextensions.k8s.io/machines.cluster.x-k8s.io created
 customresourcedefinition.apiextensions.k8s.io/machinesets.cluster.x-k8s.io created
-role.rbac.authorization.k8s.io/cabpk-leader-election-role created
-role.rbac.authorization.k8s.io/capa-leader-election-role created
-role.rbac.authorization.k8s.io/capi-leader-election-role created
-clusterrole.rbac.authorization.k8s.io/cabpk-manager-role created
-clusterrole.rbac.authorization.k8s.io/cabpk-proxy-role created
-clusterrole.rbac.authorization.k8s.io/capa-manager-role created
-clusterrole.rbac.authorization.k8s.io/capa-proxy-role created
-clusterrole.rbac.authorization.k8s.io/capi-manager-role created
-rolebinding.rbac.authorization.k8s.io/cabpk-leader-election-rolebinding created
-rolebinding.rbac.authorization.k8s.io/capa-leader-election-rolebinding created
-rolebinding.rbac.authorization.k8s.io/capi-leader-election-rolebinding created
-clusterrolebinding.rbac.authorization.k8s.io/cabpk-manager-rolebinding created
-clusterrolebinding.rbac.authorization.k8s.io/cabpk-proxy-rolebinding created
-clusterrolebinding.rbac.authorization.k8s.io/capa-manager-rolebinding created
-clusterrolebinding.rbac.authorization.k8s.io/capa-proxy-rolebinding created
-clusterrolebinding.rbac.authorization.k8s.io/capi-manager-rolebinding created
+...
 secret/capa-manager-bootstrap-credentials created
 service/cabpk-controller-manager-metrics-service created
 service/capa-controller-manager-metrics-service created
@@ -214,7 +199,22 @@ deployment.apps/cabpk-controller-manager created
 deployment.apps/capa-controller-manager created
 deployment.apps/capi-controller-manager created
 ```
+Make sure that the new controllers are in a running state -
+
+```shell
+kubectl get pods --all-namespaces
+```
+
+should return similar to this - 
+
+```console
+NAMESPACE            NAME                                               READY   STATUS    RESTARTS   AGE
+cabpk-system         cabpk-controller-manager-6dcc9b8b96-5lxm6          2/2     Running   0          2m36s
+capa-system          capa-controller-manager-57ff9959ff-zvt4w           1/1     Running   0          2m36s
+capi-system          capi-controller-manager-66d98dc68f-jx5c5           1/1     Running   0          2m36s
+kube-system          coredns-6955765f44-92gc8                           1/1     Running   0          7m33s
+```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTExOTY3NjM2NzEsLTEzNDMwNjExNjYsMT
+eyJoaXN0b3J5IjpbLTIwMDA0NTc1MTMsLTEzNDMwNjExNjYsMT
 A3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
