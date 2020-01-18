@@ -586,8 +586,15 @@ Welcome to Ubuntu 16.04.3 LTS (GNU/Linux 4.4.0-1047-aws x86_64)
  * Management:     https://landscape.canonical.com
 ...
 ```
-Once you are logged into the bastion host, you have to copy [scp or copy&paste] the above ssh key to the bastion host. Save it as a `.pem` file and set the access mode to `600`. For examp
+Once you are logged into the bastion host, you have to copy [scp or copy&paste] the above ssh key to the bastion host. Save it as a `.pem` file and set the access mode to `600`. For example - 
 
+```shell
+vi .ssh/awsbastion.pem
+#Copy and paste the content of the key and save the file.
+chmod 600 .ssh/awsbastion.pem
+```
+
+Once the file has been transferred to the bastion host, you can now connect to any of the EC2 instances that constitute the control place and worke
 
 ----------
 
@@ -599,11 +606,11 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTcwOTEwMDA0NCwtMTcwMDU1MzIzMywtMT
-YwNjQ1NTMyMiwxOTIyMzIyNzI5LC0yMTM4MTQyMzgyLC0xMjEy
-NDI1OTY0LC01NDEzMzQyNjQsLTY2ODY0NTY3OCwxMDkyMDkyMj
-AzLC01Mjk4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5
-NzIzMTMwOTksMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Nj
-k2OCwtOTE4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUs
-LTEzNDMwNjExNjZdfQ==
+eyJoaXN0b3J5IjpbLTE3MjE3OTc1LC0xNzAwNTUzMjMzLC0xNj
+A2NDU1MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0
+MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMD
+MsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3
+MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OT
+Y4LC05MTgwODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwt
+MTM0MzA2MTE2Nl19
 -->
