@@ -327,7 +327,12 @@ ip-10-0-0-35.us-east-2.compute.internal    Ready    master   18m     v1.16.1
 ### Lifecycle management of workload cluster
 ---
 #### Increasing the # of worker nodes
-This is as simple as increaing the replica count of the machinedeployment 
+This is as simple as increasing the replica count of the machinedeployments object.  
+
+```shell
+kubectl get md -n default
+
+```
 
 
 ----------
@@ -340,7 +345,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE5OTg1OTU3MiwxOTYyNDc2OTY4LC05MT
-gwODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwtMTM0MzA2
-MTE2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbLTE4MTY2MzkwMDgsMTk2MjQ3Njk2OCwtOT
+E4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUsLTEzNDMw
+NjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
 -->
