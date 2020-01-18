@@ -354,7 +354,20 @@ spec:
   progressDeadlineSeconds: 600
   replicas: 3
 ``` 
-With a few minutes, a new ec2 instance will be spawned and added to the new cluster.  This can be validated in the 
+With a few minutes, a new ec2 instance will be spawned and added to the new cluster.  This can be validated in the EC2 console as well as the following command - 
+
+```shell
+kubectl --kubeconfig=/tmp/workload-cluster.conf get nodes
+```
+
+```console
+NAME                                       STATUS   ROLES    AGE     VERSION
+ip-10-0-0-158.us-east-2.compute.internal   Ready    <none>   15h     v1.16.1
+ip-10-0-0-19.us-east-2.compute.internal    Ready    <none>   15h     v1.16.1
+ip-10-0-0-18.us-east-2.compute.internal    Ready    master   15h     v1.16.1
+ip-10-0-0-200.us-east-2.compute.internal   Ready    master   15h     v1.16.1
+ip-10-0-0-35.us-east-2.compute.internal    Ready    master   15h     v1.16.1
+```
 
 ----------
 
@@ -366,7 +379,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTk4NDQ5MzMzNywxOTYyNDc2OTY4LC05MT
-gwODA1MTgsLTEyMzc5MTc5NjAsLTc4OTA2OTUyNSwtMTM0MzA2
-MTE2NiwxMDc2NzE5NTksLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbNjU1ODU3NTQwLDE5NjI0NzY5NjgsLTkxOD
+A4MDUxOCwtMTIzNzkxNzk2MCwtNzg5MDY5NTI1LC0xMzQzMDYx
+MTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
 -->
