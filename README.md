@@ -464,6 +464,11 @@ spec:
   instanceType: t2.medium
   sshKeyName: awsbastion
 ```
+Change the `instanceType`, `sshKeyName`, `K8s version` and other name references accordingly.  Once done apply the configuration file.
+
+```shell
+
+```
 
 ----------
 
@@ -475,9 +480,9 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIxNDE2MzI5NTgsLTExMjg2MjA0MzksLT
-M1NzA3NjY0Nyw5NzIzMTMwOTksMTgwMTU2NjgzNSw4NDI5NzM5
-NDksMTk2MjQ3Njk2OCwtOTE4MDgwNTE4LC0xMjM3OTE3OTYwLC
-03ODkwNjk1MjUsLTEzNDMwNjExNjYsMTA3NjcxOTU5LC0xNjg2
-ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbOTA0MjY3OTk5LC0xMTI4NjIwNDM5LC0zNT
+cwNzY2NDcsOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOTQ5
+LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMTIzNzkxNzk2MCwtNz
+g5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1
+NzQxM119
 -->
