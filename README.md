@@ -397,7 +397,7 @@ spec:
   progressDeadlineSeconds: 600
   replicas: 2
 ``` 
-With a few minutes, a node will be drained, removed from the cluster and its corrosponding  ec2 instance will be terminated.  This can be validated in the EC2 console as well as the following command - 
+With a few minutes, a node will be drained, removed from the cluster and its corresponding  ec2 instance will be terminated.  This can be validated in the EC2 console as well as the following command - 
 
 ```shell
 kubectl --kubeconfig=/tmp/workload-cluster.conf get nodes
@@ -410,7 +410,8 @@ ip-10-0-0-18.us-east-2.compute.internal    Ready    master   15h     v1.16.1
 ...
 ```
 #### Resurrection of a worker node
-For this demo, we will increase the worker node count back to 3 (in not already done). This can per performed by following the steps in the section `
+For this demo, we will increase the worker node count back to 3 (in not already done). This can per performed by the steps in the section `Manually increasing the # of worker nodes` Once the cluster has reached a steady state, and all the nodes are available in the cluster, terminate one of the worker nodes from the AWS ec2 console
+
 
 ----------
 
@@ -422,7 +423,7 @@ References -
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNzk1Mzk2NzA2LDE4MDE1NjY4MzUsODQyOT
+eyJoaXN0b3J5IjpbNzQ2MjE5OTQ5LDE4MDE1NjY4MzUsODQyOT
 czOTQ5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMTIzNzkxNzk2
 MCwtNzg5MDY5NTI1LC0xMzQzMDYxMTY2LDEwNzY3MTk1OSwtMT
 Y4Njg1NzQxM119
