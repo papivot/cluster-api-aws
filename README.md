@@ -37,7 +37,7 @@ kubeadmconfigtemplates 			bootstrap.cluster.x-k8s.io true KubeadmConfigTemplate
 
 The controllers and apiservices are as follows - 
 
-```
+```console
 cluster-api-controller 			- v1alpha2.cluster.x-k8s.io
 cluster-api-aws-controller 		- v1alpha2.infrastructure.cluster.x-k8s.io
 cluster-api-kubeadm-controller 	- v1alpha2.bootstrap.cluster.x-k8s.io
@@ -78,5 +78,6 @@ make binaries
 make generate-examples
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2ODY4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbLTE0MTMwMjE1MjAsLTE2ODY4NTc0MTNdfQ
+==
 -->
