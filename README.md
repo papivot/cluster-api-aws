@@ -108,8 +108,10 @@ AWS::IAM::Role |controllers.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLET
 AWS::IAM::Role |nodes.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
 ```
 
-This completes the preliminary steps required to setup the enviornment. These steps are per
+This completes the preliminary steps required to setup the environment. These steps are performed only once.
+
+#### Setting up the management cluster 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjk3ODI3NjI4LDEwNzY3MTk1OSwtMTY4Nj
-g1NzQxM119
+eyJoaXN0b3J5IjpbMTMwMzA4MjEyNSwxMDc2NzE5NTksLTE2OD
+Y4NTc0MTNdfQ==
 -->
