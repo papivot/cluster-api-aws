@@ -112,7 +112,7 @@ This completes the preliminary steps required to setup the environment. These st
 
 #### Setting up the Management Cluster 
 
-Export the following environment variables. These variables can be modified as per the requirements. 
+Export the following environment variables. These variables ***can be modified as per the requirements***. 
 
 ```console
 export AWS_CREDENTIALS=$(aws iam create-access-key --user-name bootstrapper.cluster-api-provider-aws.sigs.k8s.io)
@@ -124,7 +124,9 @@ export AWS_REGION="us-east-2"
 export CONTROL_PLANE_MACHINE_TYPE="t2.medium"
 export NODE_MACHINE_TYPE="t2.medium"
 ```
+
+Generate the sample yaml files that will be required to setup the management cluster (CRDs/controllers) and the 
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTc0MjM0OTk0OSwxMDc2NzE5NTksLTE2OD
-Y4NTc0MTNdfQ==
+eyJoaXN0b3J5IjpbLTQwNDYxMzA3LDEwNzY3MTk1OSwtMTY4Nj
+g1NzQxM119
 -->
