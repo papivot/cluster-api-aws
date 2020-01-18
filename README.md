@@ -157,12 +157,27 @@ Make sure the cluster is accessible using the kubeconfig file
 ```shell
 kubectl get pods --all-namespaces
 ```
-should retunr something similar
+should return something similar (with all PODS in a `Running` state)
 
 ```console
+NAMESPACE            NAME                                               READY   STATUS    RESTARTS   AGE
+kube-system          coredns-6955765f44-92gc8                           1/1     Running   0          104s
+kube-system          coredns-6955765f44-snqhv                           1/1     Running   0          104s
+kube-system          etcd-clusterapi-control-plane                      1/1     Running   0          2m1s
+kube-system          kindnet-4h8qx                                      1/1     Running   0          104s
+kube-system          kube-apiserver-clusterapi-control-plane            1/1     Running   0          2m1s
+kube-system          kube-controller-manager-clusterapi-control-plane   1/1     Running   0          2m
+kube-system          kube-proxy-5mqvv                                   1/1     Running   0          104s
+kube-system          kube-scheduler-clusterapi-control-plane            1/1     Running   0          2m
+local-path-storage   local-path-provisioner-7745554f7f-ktlj5            1/1     Running   0          104s
+```
+
+Install the Cluster API CRDs and controllers to this newly created management cluster -
+
+```shell
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE1MDkyMTYzOTMsMTA3NjcxOTU5LC0xNj
+eyJoaXN0b3J5IjpbLTEzNDMwNjExNjYsMTA3NjcxOTU5LC0xNj
 g2ODU3NDEzXX0=
 -->
