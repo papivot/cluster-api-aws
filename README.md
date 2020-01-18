@@ -87,6 +87,34 @@ Use the binary to create the AWS Cloudformation stack in your AWS account to set
 clusterawsadm alpha bootstrap create-stack
 ```
 
+This should take a while but create the following required IAM objects in the AWS account 
+
+```console
+Resource |Type |Status
+
+AWS::IAM::Group |bootstrapper.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
+AWS::IAM::User |bootstrapper.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
+
+AWS::IAM::InstanceProfile |control-plane.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
+AWS::IAM::InstanceProfile |controllers.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
+AWS::IAM::InstanceProfile |nodes.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
+
+ AWS::IAM::ManagedPolicy |arn:aws:iam::291518665672:policy/control-plane.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
+
+AWS::IAM::ManagedPolicy |arn:aws:iam::291518665672:policy/controllers.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
+
+AWS::IAM::ManagedPolicy |arn:aws:iam::291518665672:policy/nodes.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
+
+  
+
+AWS::IAM::Role |control-plane.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
+
+AWS::IAM::Role |controllers.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
+
+AWS::IAM::Role |nodes.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
+```
+
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTUwMDM5NzU3NiwtMTY4Njg1NzQxM119
+eyJoaXN0b3J5IjpbLTIxMjE2MjA2NTYsLTE2ODY4NTc0MTNdfQ
+==
 -->
