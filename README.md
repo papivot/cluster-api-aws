@@ -296,9 +296,27 @@ kubectl --kubeconfig=/tmp/workload-cluster.conf get pods --all-namespaces
 ```
 
 ```console
+NAMESPACE     NAME                                                               READY   STATUS    RESTARTS   AGE
+kube-system   calico-kube-controllers-564b6667d7-mbw5f                           1/1     Running   0          102s
+kube-system   calico-node-8plqr                                                  1/1     Running   0          102s
+kube-system   calico-node-gl8vf                                                  1/1     Running   0          102s
+kube-system   calico-node-rjdvd                                                  1/1     Running   0          102s
+kube-system   coredns-5644d7b6d9-jtdj4                                           1/1     Running   0          10m
+kube-system   coredns-5644d7b6d9-r9mlv                                           1/1     Running   0          10m
+kube-system   etcd-ip-10-0-0-18.us-east-2.compute.internal                       1/1     Running   0          9m43s
+...
+```
+
+* Step 5. - Deploy the worker nodes leveraging the cluster API.
+
+```shell
+kubectl apply -f ./examples/_out/machinedeployment.yaml
+```
+
+```console
 
 ```
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTAzMjcxMjIzLC03ODkwNjk1MjUsLTEzND
-MwNjExNjYsMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbLTQwMDM1MjU1NSwtNzg5MDY5NTI1LC0xMz
+QzMDYxMTY2LDEwNzY3MTk1OSwtMTY4Njg1NzQxM119
 -->
