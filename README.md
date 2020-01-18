@@ -73,14 +73,14 @@ sudo mv kind /usr/local/bin
 ```shell
 git clone https://github.com/kubernetes-sigs/cluster-api-provider-aws.git --branch release-0.4
 cd cluster-api-provider-aws
-make test # To validate everything works fine
+#### make test # To validate everything works fine
 make binaries
 make generate-examples
 ```
 
 Copy the generated **clusterawsadm** binary to /usr/local/bin
 ```shell
-cp ./bin/clusterawsadm /usr/local/bin
+sudo cp ./bin/clusterawsadm /usr/local/bin
 ```
 Use the binary to create the AWS Cloudformation stack in your AWS account to set up the required IAM users/group/profiles.
 ```shell
@@ -108,6 +108,8 @@ AWS::IAM::Role |controllers.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLET
 AWS::IAM::Role |nodes.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
 ```
 
+This completes the preliminary steps required to setup the enviornment. These steps are per
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3NjcxOTU5LC0xNjg2ODU3NDEzXX0=
+eyJoaXN0b3J5IjpbMjk3ODI3NjI4LDEwNzY3MTk1OSwtMTY4Nj
+g1NzQxM119
 -->
