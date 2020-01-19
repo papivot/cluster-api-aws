@@ -614,16 +614,16 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1052-aws x86_64)
 ...
 ```
 
-## Destroying/Deleting a cluster
+### Destroying/Deleting a workload cluster
 
 This should be a reletevely simple task of deleting the cluster -
 
 ```shell
 kubectl delete cluster workload-cluster
 ```
-
+This will take some time as all EC2 instances and AWS VPC and related objects are destroyed. 
 ```console
-
+cluster.cluster.x-k8s.io "workload-cluster" deleted
 ```
 
 ## References
@@ -634,7 +634,7 @@ kubectl delete cluster workload-cluster
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTEyODM3NTM3MDgsLTcwOTAwOTU3OCwtMT
+eyJoaXN0b3J5IjpbLTExODA0MjYzMDcsLTcwOTAwOTU3OCwtMT
 cwMDU1MzIzMywtMTYwNjQ1NTMyMiwxOTIyMzIyNzI5LC0yMTM4
 MTQyMzgyLC0xMjEyNDI1OTY0LC01NDEzMzQyNjQsLTY2ODY0NT
 Y3OCwxMDkyMDkyMjAzLC01Mjk4MjM3MDgsLTExMjg2MjA0Mzks
