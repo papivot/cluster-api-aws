@@ -614,7 +614,9 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1052-aws x86_64)
 ...
 ```
 
+## Destroying/Deleting a cluster
 
+This
 
 ## References
 
@@ -624,11 +626,11 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1052-aws x86_64)
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcwOTAwOTU3OCwtMTcwMDU1MzIzMywtMT
-YwNjQ1NTMyMiwxOTIyMzIyNzI5LC0yMTM4MTQyMzgyLC0xMjEy
-NDI1OTY0LC01NDEzMzQyNjQsLTY2ODY0NTY3OCwxMDkyMDkyMj
-AzLC01Mjk4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3NjY0Nyw5
-NzIzMTMwOTksMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2MjQ3Nj
-k2OCwtOTE4MDgwNTE4LC0xMjM3OTE3OTYwLC03ODkwNjk1MjUs
-LTEzNDMwNjExNjZdfQ==
+eyJoaXN0b3J5IjpbLTgyMjcwODA1NCwtNzA5MDA5NTc4LC0xNz
+AwNTUzMjMzLC0xNjA2NDU1MzIyLDE5MjIzMjI3MjksLTIxMzgx
+NDIzODIsLTEyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Nj
+c4LDEwOTIwOTIyMDMsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwt
+MzU3MDc2NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mz
+k0OSwxOTYyNDc2OTY4LC05MTgwODA1MTgsLTEyMzc5MTc5NjAs
+LTc4OTA2OTUyNV19
 -->
