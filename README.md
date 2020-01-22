@@ -153,7 +153,7 @@ kubectl cluster-info --context kind-clusterapi
 
 Thanks for using kind! 😊
 ```
-Make sure the cluster is accessible using the kubeconfig file 
+Make sure the cluster is accessible using the kubeconfig file.
 
 ```shell
 kubectl get pods --all-namespaces
@@ -170,7 +170,7 @@ kube-system          kube-scheduler-clusterapi-control-plane            1/1     
 local-path-storage   local-path-provisioner-7745554f7f-ktlj5            1/1     Running   0          104s
 ```
 
-Install the Cluster API CRDs and controllers to this newly created management cluster -
+Using the `provider-components.yaml`, install the Cluster API CRDs and controllers to this newly created management cluster -
 
 ```shell
 kubectl apply -f ./examples/_out/provider-components.yaml
@@ -192,13 +192,13 @@ deployment.apps/cabpk-controller-manager created
 deployment.apps/capa-controller-manager created
 deployment.apps/capi-controller-manager created
 ```
-Make sure that the new controllers are in a running state -
+Make sure that all the new controllers are in a running state -
 
 ```shell
 kubectl get pods --all-namespaces
 ```
 
-should return similar to this. The `capi-system`,`capa-system` and `cabpk-system` are the new namespaces with the controllers running in them - 
+should return similar to below. The `capi-system`,`capa-system` and `cabpk-system` are the new namespaces with the controllers running in them - 
 
 ```console
 NAMESPACE            NAME                                               READY   STATUS    RESTARTS   AGE
@@ -708,7 +708,7 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc2NjkwODUwNSwxMDczMzgyNzgzLDEyMz
+eyJoaXN0b3J5IjpbLTUzNDMwMzIwNywxMDczMzgyNzgzLDEyMz
 E5MTYxMjIsODkwMzc2MzgxLC03MDkwMDk1NzgsLTE3MDA1NTMy
 MzMsLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4Mi
 wtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5
