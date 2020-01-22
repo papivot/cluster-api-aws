@@ -666,7 +666,15 @@ Once done, apply the yaml.
 ```shell
 kubectl apply -f machinedeployment.yaml
 ```
+Flow - A new EC2 instance is deployed (using an AMI that 
 
+```console
+NAME                                        STATUS   ROLES    AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION    CONTAINER-RUNTIME
+...
+ip-10-20-0-10.us-east-2.compute.internal    Ready    <none>   6m38s   v1.16.1   10.20.0.10    <none>        Ubuntu 18.04.3 LTS   4.15.0-1052-aws   containerd://1.3.0
+ip-10-20-0-79.us-east-2.compute.internal    Ready    <none>   6m49s   v1.16.1   10.20.0.79    <none>        Ubuntu 18.04.3 LTS   4.15.0-1052-aws   containerd://1.3.0
+...
+```
 
 ### Destroying/Deleting a workload cluster
 
@@ -688,11 +696,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjM4MTk5OTE2LDEyMzE5MTYxMjIsODkwMz
-c2MzgxLC03MDkwMDk1NzgsLTE3MDA1NTMyMzMsLTE2MDY0NTUz
-MjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4MiwtMTIxMjQyNTk2NC
-wtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5MjA5MjIwMywtNTI5
-ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNzY2NDcsOTcyMzEzMD
-k5LDE4MDE1NjY4MzUsODQyOTczOTQ5LDE5NjI0NzY5NjgsLTkx
-ODA4MDUxOF19
+eyJoaXN0b3J5IjpbMTczOTk3OTU5NiwxMjMxOTE2MTIyLDg5MD
+M3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUzMjMzLC0xNjA2NDU1
+MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0MjU5Nj
+QsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMDMsLTUy
+OTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3MjMxMz
+A5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OTY4LC05
+MTgwODA1MThdfQ==
 -->
