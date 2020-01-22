@@ -277,7 +277,7 @@ awsmachine.infrastructure.cluster.x-k8s.io/workload-cluster-controlplane-2 creat
 
 This may take a while - 10-15 mins. 
 
-* Step 3 - Once this is complete, we need to grab the kubeconfig file that was associated with this workload server. The kubeconfig is stored as a secret in the namespace associated with the cluster (default in this example). This will allow us to connect to the cluster. 
+* Step 3 - Once this is complete, we need to grab the kubeconfig file that was associated with this workload server. The `kubeconfig` is stored as a secret within the management cluster, in the namespace associated with the workload cluster (default in this example) . This will allow us to connect to the cluster. 
 
 ```shell
 kubectl get secrets -n default workload-cluster-kubeconfig -o json |jq -r .data.value|base64 -d > /tmp/workload-cluster.conf
@@ -711,11 +711,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTc1NDQ5NDc2OSwxMDczMzgyNzgzLDEyMz
-E5MTYxMjIsODkwMzc2MzgxLC03MDkwMDk1NzgsLTE3MDA1NTMy
-MzMsLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4Mi
-wtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5
-MjA5MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNz
-Y2NDcsOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOTQ5LDE5
-NjI0NzY5NjhdfQ==
+eyJoaXN0b3J5IjpbLTE3Nzk1OTA5NDEsMTA3MzM4Mjc4MywxMj
+MxOTE2MTIyLDg5MDM3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUz
+MjMzLC0xNjA2NDU1MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzOD
+IsLTEyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEw
+OTIwOTIyMDMsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MD
+c2NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwx
+OTYyNDc2OTY4XX0=
 -->
