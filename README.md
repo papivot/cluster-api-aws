@@ -644,7 +644,7 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1052-aws x86_64)
 ...
 ```
 
-### Upgrading worker nodes Kubernetes version
+### Upgrading K8s version of worker nodes.
 
 Note only minor version upgrades are recommended. For e.g. 1.16.1 -> 1.16.2. (need to verify if this is even a recommended scenario if the control plane is still at the lower version - e.g. 1.16.1)
 
@@ -680,14 +680,11 @@ ip-10-20-0-79.us-east-2.compute.internal    Ready    <none>   6m49s   v1.16.1   
 
 ```console
 NAME                                        STATUS   ROLES    AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION    CONTAINER-RUNTIME
-ip-10-20-0-126.us-east-2.compute.internal   Ready    master   28m   v1.16.1   10.20.0.126   <none>        Ubuntu 18.04.3 LTS   4.15.0-1052-aws   containerd://1.3.0
+...
 ip-10-20-0-141.us-east-2.compute.internal   Ready    <none>   10m   v1.16.2   10.20.0.141   <none>        Ubuntu 18.04.3 LTS   4.15.0-1052-aws   containerd://1.3.0
-ip-10-20-0-158.us-east-2.compute.internal   Ready    master   25m   v1.16.1   10.20.0.158   <none>        Ubuntu 18.04.3 LTS   4.15.0-1052-aws   containerd://1.3.0
 ip-10-20-0-193.us-east-2.compute.internal   Ready    <none>   12m   v1.16.2   10.20.0.193   <none>        Ubuntu 18.04.3 LTS   4.15.0-1052-aws   containerd://1.3.0
-ip-10-20-0-75.us-east-2.compute.internal    Ready    master   26m   v1.16.1   10.20.0.75    <none>        Ubuntu 18.04.3 LTS   4.15.0-1052-aws   containerd://1.3.0
+...
 ```
-
-
 
 ### Destroying/Deleting a workload cluster
 
@@ -709,11 +706,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA2ODAyNjEwLDEyMzE5MTYxMjIsODkwMz
-c2MzgxLC03MDkwMDk1NzgsLTE3MDA1NTMyMzMsLTE2MDY0NTUz
-MjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4MiwtMTIxMjQyNTk2NC
-wtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5MjA5MjIwMywtNTI5
-ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNzY2NDcsOTcyMzEzMD
-k5LDE4MDE1NjY4MzUsODQyOTczOTQ5LDE5NjI0NzY5NjgsLTkx
-ODA4MDUxOF19
+eyJoaXN0b3J5IjpbMTA3MzM4Mjc4MywxMjMxOTE2MTIyLDg5MD
+M3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUzMjMzLC0xNjA2NDU1
+MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0MjU5Nj
+QsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMDMsLTUy
+OTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3MjMxMz
+A5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OTY4LC05
+MTgwODA1MThdfQ==
 -->
