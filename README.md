@@ -650,6 +650,11 @@ Note only minor version upgrades are recommended. For e.g. 1.16.1 -> 1.16.2. (ne
 
 Edit the `machinedeployment.yaml` file and modify the version number to the required minor version 
 
+```yaml
+
+```
+
+
 ### Destroying/Deleting a workload cluster
 
 This should be a relatively simple task of deleting the cluster -
@@ -670,7 +675,7 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg2MTg3ODQxNCwxMjMxOTE2MTIyLDg5MD
+eyJoaXN0b3J5IjpbMTk1MTI4MDM5MSwxMjMxOTE2MTIyLDg5MD
 M3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUzMjMzLC0xNjA2NDU1
 MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0MjU5Nj
 QsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMDMsLTUy
