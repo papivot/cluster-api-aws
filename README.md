@@ -644,9 +644,11 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1052-aws x86_64)
 ...
 ```
 
-### Upgrading worrker nodes Kubernetes version
+### Upgrading worker nodes Kubernetes version
 
-Note only minor version upgrades are recommended. For e.g. 1.16.1 -> 1.16.2. (need to verify if this is even a recommended scenari
+Note only minor version upgrades are recommended. For e.g. 1.16.1 -> 1.16.2. (need to verify if this is even a recommended scenario if the control plane is still at the lower version - e.g. 1.16.1)
+
+Edit the `machinedeployment.yaml` file and modify the version number to the required minor version 
 
 ### Destroying/Deleting a workload cluster
 
@@ -668,7 +670,7 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTM1NDc0Nzg5MSwxMjMxOTE2MTIyLDg5MD
+eyJoaXN0b3J5IjpbLTg2MTg3ODQxNCwxMjMxOTE2MTIyLDg5MD
 M3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUzMjMzLC0xNjA2NDU1
 MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0MjU5Nj
 QsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMDMsLTUy
