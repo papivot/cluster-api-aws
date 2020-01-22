@@ -666,7 +666,7 @@ Once done, apply the yaml.
 ```shell
 kubectl apply -f machinedeployment.yaml
 ```
-Flow - A new EC2 instance is deployed (using an AMI that 
+Flow - A new EC2 instance is deployed (using an AMI that available for the new version of Kubernetes requested). Kubeadm joins the instance as a new node to the cluster. One of the nodes that is 
 
 ```console
 NAME                                        STATUS   ROLES    AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION    CONTAINER-RUNTIME
@@ -696,7 +696,7 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTczOTk3OTU5NiwxMjMxOTE2MTIyLDg5MD
+eyJoaXN0b3J5IjpbMTA2NDU5NDA5NCwxMjMxOTE2MTIyLDg5MD
 M3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUzMjMzLC0xNjA2NDU1
 MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0MjU5Nj
 QsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMDMsLTUy
