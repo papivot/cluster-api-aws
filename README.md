@@ -631,7 +631,7 @@ vi ~/.ssh/awsbastion.pem
 chmod 600 ~/.ssh/awsbastion.pem
 ```
 
-Once the file has been transferred to the bastion host, you can now connect to any of the EC2 instances that constitute the control place and worker nodes. Use the `Private DNS Name` from the AWS EC2 console for connection. 
+Now that the private key file has been transferred to the bastion host, you can connect to any of the EC2 instances that constitute the control place and worker nodes. Use the `Private DNS Name` from the AWS EC2 console for connection. 
 
 ```shell
 ssh -i ~/.ssh/awsbastion.pem ubuntu@ip-10-0-0-226.us-east-2.compute.internal
@@ -653,7 +653,7 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1052-aws x86_64)
 
 ### Upgrading K8s version of worker nodes.
 
-Note only minor version upgrades are recommended. For e.g. 1.16.1 -> 1.16.2. (need to verify if this is even a recommended scenario if the control plane is still at the lower version - e.g. 1.16.1)
+Note only minor version upgrades are recommended. For e.g. 1.16.1 -> 1.16.2. (need to verify if this is even a recommended scenario, if the control plane is still at the lower version - e.g. 1.16.1)
 
 Edit the `machinedeployment.yaml` file and modify the version number to the required minor version 
 
@@ -713,7 +713,7 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTcyMzM2MzE1NywtODExMjUwNDg5LDEwNz
+eyJoaXN0b3J5IjpbLTQwNTE0MTEwOSwtODExMjUwNDg5LDEwNz
 MzODI3ODMsMTIzMTkxNjEyMiw4OTAzNzYzODEsLTcwOTAwOTU3
 OCwtMTcwMDU1MzIzMywtMTYwNjQ1NTMyMiwxOTIyMzIyNzI5LC
 0yMTM4MTQyMzgyLC0xMjEyNDI1OTY0LC01NDEzMzQyNjQsLTY2
