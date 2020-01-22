@@ -277,18 +277,18 @@ awsmachine.infrastructure.cluster.x-k8s.io/workload-cluster-controlplane-2 creat
 
 This may take a while - 10-15 mins. 
 
-* Step 3 - Once this is complete, we need to grab the kubeconfig file that was associated with this workload server. The `kubeconfig` is stored as a secret within the management cluster, in the namespace associated with the workload cluster (default in this example) . This will allow us to connect to the cluster. 
+* Step 3 - Once this is complete, we need to grab the kubeconfig file that was associated with this workload server. The `kubeconfig` is stored as a secret within the management cluster, in the namespace associated with the workload cluster (default in this example) . This will allow us to connect to the workload cluster. 
 
 ```shell
 kubectl get secrets -n default workload-cluster-kubeconfig -o json |jq -r .data.value|base64 -d > /tmp/workload-cluster.conf
 ```
-The workload-cluster.conf file should be in a kubeconfig file format -
+The `workload-cluster.conf` file should be in a similar kubeconfig file format -
 
 ```yaml
 apiVersion: v1
 clusters:
 - cluster:
-    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5ekNDQWJPZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01ERXhPREF6TXpBd01Gb1hEVE13TURFeE5UQXpNelV3TUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTFN5CjhLYy9lTVdCMzN2MXpaWVpkNjdubE8rd1oyUEN1Z0dIeXE0dTU3eDJ3YmJFcy9mRGpMVWZQOUJ1R1M5Ym4wY3QKeWthZVRrcGpyNk96dzRyR0E0dm1ZVUtLbFNkbXpUcC9LZElSUnFBa3ZCUHE5VGZPT3BZNmJ4cVR3QUVVYTB5Zwo1R0VHRm5JUWkwMW5zaEFyeitQS3VZUFNNSk5ML01aaThYSGt0cGVrVmtsMGhMUVZCcnlmUklwM3lnTk5LU1g3CjNMMVBnNmJuT1lybG5Ub1ZrcERnLzlxTXh3N0RqRzB6bDFQcFZOOHNlU1gzTEtHbjR0bUpjRjdKMGwrdTFvZ1cKaTFpOTNH
+    certificate-authority-data: LS0tLS1CRUdJTiBDRVJUSUZJQ0FURS0tLS0tCk1JSUN5ekNDQWJPZ0F3SUJBZ0lCQURBTkJna3Foa2lHOXcwQkFRc0ZBREFWTVJNd0VRWURWUVFERXdwcmRXSmwKY201bGRHVnpNQjRYRFRJd01ERXhPREF6TXpBd01Gb1hEVE13TURFeE5UQXpNelV3TUZvd0ZURVRNQkVHQTFVRQpBeE1LYTNWaVpYSnVaWFJsY3pDQ0FTSXdEUVlKS29aSWh2Y05BUUVCQlFBRGdnRVBBRENDQVFvQ2dnRUJBTFN5CjhLYy9lTVdCMzN2MXpaWVpkNjdubE8rd1oyUEN1Z0dIeXE0dTU3eDJ3YmJFcy9mRGpMVWZQOUJ1R1M5Ym4wY3QKeWthZVRrcGpyNk96dzRyR0E0dm1ZVUtLbFNkbXp...
     ...
 contexts:
 - context:
@@ -320,6 +320,7 @@ Validate all the pods are successfully running.
 ```shell
 kubectl --kubeconfig=/tmp/workload-cluster.conf get pods --all-namespaces
 ```
+Should display an output similar to this -
 
 ```console
 NAMESPACE     NAME                                                               READY   STATUS    RESTARTS   AGE
@@ -337,12 +338,14 @@ kube-system   etcd-ip-10-0-0-18.us-east-2.compute.internal                      
 ```shell
 kubectl apply -f ./examples/_out/machinedeployment.yaml
 ```
+Should display an output similar to this -
+
 ```console
 kubeadmconfigtemplate.bootstrap.cluster.x-k8s.io/workload-cluster-md-0 created
 machinedeployment.cluster.x-k8s.io/workload-cluster-md-0 created
 awsmachinetemplate.infrastructure.cluster.x-k8s.io/workload-cluster-md-0 created
 ```
-In a short time, a machine deployment consisting of 2 machines (2 worker nodes) will be added to the cluster. 
+In a short time, a machine deployment consisting of 2 machines (2 worker nodes) will be added to the workload  cluster. 
 
 ```shell
 kubectl --kubeconfig=/tmp/workload-cluster.conf get nodes
@@ -711,7 +714,7 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE3Nzk1OTA5NDEsMTA3MzM4Mjc4MywxMj
+eyJoaXN0b3J5IjpbLTE4MTg1ODY5NTgsMTA3MzM4Mjc4MywxMj
 MxOTE2MTIyLDg5MDM3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUz
 MjMzLC0xNjA2NDU1MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzOD
 IsLTEyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEw
