@@ -345,12 +345,12 @@ kubeadmconfigtemplate.bootstrap.cluster.x-k8s.io/workload-cluster-md-0 created
 machinedeployment.cluster.x-k8s.io/workload-cluster-md-0 created
 awsmachinetemplate.infrastructure.cluster.x-k8s.io/workload-cluster-md-0 created
 ```
-In a short time, a machine deployment consisting of 2 machines (2 worker nodes) will be added to the workload  cluster. 
+In a short time, a machine deployment consisting of 2 machines (2 worker nodes) will be added to the workload cluster. 
 
 ```shell
 kubectl --kubeconfig=/tmp/workload-cluster.conf get nodes
 ```
-should return something similar - 
+Should display an output similar to this -
 
 ```console
 NAME                                       STATUS   ROLES    AGE     VERSION
@@ -714,11 +714,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE4MTg1ODY5NTgsMTA3MzM4Mjc4MywxMj
-MxOTE2MTIyLDg5MDM3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUz
-MjMzLC0xNjA2NDU1MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzOD
-IsLTEyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEw
-OTIwOTIyMDMsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MD
-c2NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwx
-OTYyNDc2OTY4XX0=
+eyJoaXN0b3J5IjpbLTgxMTI1MDQ4OSwxMDczMzgyNzgzLDEyMz
+E5MTYxMjIsODkwMzc2MzgxLC03MDkwMDk1NzgsLTE3MDA1NTMy
+MzMsLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4Mi
+wtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5
+MjA5MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNz
+Y2NDcsOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOTQ5LDE5
+NjI0NzY5NjhdfQ==
 -->
