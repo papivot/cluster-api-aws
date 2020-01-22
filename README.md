@@ -644,6 +644,10 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1052-aws x86_64)
 ...
 ```
 
+### Upgrading worrker nodes Kubernetes version
+
+Note only minor version upgrades are recommended. For e.g. 1.16.1 -> 1.16.2. (need to verify if this is even a recommended scenari
+
 ### Destroying/Deleting a workload cluster
 
 This should be a relatively simple task of deleting the cluster -
@@ -664,11 +668,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTIzMTkxNjEyMiw4OTAzNzYzODEsLTcwOT
-AwOTU3OCwtMTcwMDU1MzIzMywtMTYwNjQ1NTMyMiwxOTIyMzIy
-NzI5LC0yMTM4MTQyMzgyLC0xMjEyNDI1OTY0LC01NDEzMzQyNj
-QsLTY2ODY0NTY3OCwxMDkyMDkyMjAzLC01Mjk4MjM3MDgsLTEx
-Mjg2MjA0MzksLTM1NzA3NjY0Nyw5NzIzMTMwOTksMTgwMTU2Nj
-gzNSw4NDI5NzM5NDksMTk2MjQ3Njk2OCwtOTE4MDgwNTE4LC0x
-MjM3OTE3OTYwXX0=
+eyJoaXN0b3J5IjpbLTM1NDc0Nzg5MSwxMjMxOTE2MTIyLDg5MD
+M3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUzMjMzLC0xNjA2NDU1
+MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0MjU5Nj
+QsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMDMsLTUy
+OTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3MjMxMz
+A5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OTY4LC05
+MTgwODA1MThdfQ==
 -->
