@@ -216,8 +216,30 @@ With this, the management cluster is now ready. You can now start deploying work
 Note - If you want to have use your custom VPC cidr block, you can modify the cluster.yaml accordingly - 
 
 ```yaml
-
-
+...
+---
+apiVersion: infrastructure.cluster.x-k8s.io/v1alpha2
+kind: AWSCluster
+metadata:
+  name: workload-cluster-aws-1
+  namespace: default
+spec:
+# Add this section with custom cidr blocks and AZ info.
+#--------------------------------
+  networkSpec:
+    subnets:
+    - availabilityZone: us-east-2a
+      cidrBlock: 10.20.0.0/24
+      isPublic: False
+    - availabilityZone: us-east-2a
+      cidrBlock: 10.20.1.0/24
+      isPublic: True
+    vpc:
+      cidrBlock: 10.20.0.0/16
+  region: us-east-2
+  sshKeyName: awsbastion
+ ---
+ ...
 ```
 
 ```shell
@@ -641,11 +663,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTQ1NjMwOTA2MCw4OTAzNzYzODEsLTcwOT
-AwOTU3OCwtMTcwMDU1MzIzMywtMTYwNjQ1NTMyMiwxOTIyMzIy
-NzI5LC0yMTM4MTQyMzgyLC0xMjEyNDI1OTY0LC01NDEzMzQyNj
-QsLTY2ODY0NTY3OCwxMDkyMDkyMjAzLC01Mjk4MjM3MDgsLTEx
-Mjg2MjA0MzksLTM1NzA3NjY0Nyw5NzIzMTMwOTksMTgwMTU2Nj
-gzNSw4NDI5NzM5NDksMTk2MjQ3Njk2OCwtOTE4MDgwNTE4LC0x
-MjM3OTE3OTYwXX0=
+eyJoaXN0b3J5IjpbLTE0Njg0NzIyNzcsODkwMzc2MzgxLC03MD
+kwMDk1NzgsLTE3MDA1NTMyMzMsLTE2MDY0NTUzMjIsMTkyMjMy
+MjcyOSwtMjEzODE0MjM4MiwtMTIxMjQyNTk2NCwtNTQxMzM0Mj
+Y0LC02Njg2NDU2NzgsMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0x
+MTI4NjIwNDM5LC0zNTcwNzY2NDcsOTcyMzEzMDk5LDE4MDE1Nj
+Y4MzUsODQyOTczOTQ5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwt
+MTIzNzkxNzk2MF19
 -->
