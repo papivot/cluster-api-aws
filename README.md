@@ -213,6 +213,13 @@ With this, the management cluster is now ready. You can now start deploying work
 
 * Step 1 - Creating the Cluster object
 
+Note - If you want to have use your custom VPC cidr block, you can modify the cluster.yaml accordingly - 
+
+```yaml
+
+
+```
+
 ```shell
 kubectl apply -f ./examples/_out/cluster.yaml
 ```
@@ -634,11 +641,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbODkwMzc2MzgxLC03MDkwMDk1NzgsLTE3MD
-A1NTMyMzMsLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEzODE0
-MjM4MiwtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2Nz
-gsMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5LC0z
-NTcwNzY2NDcsOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOT
-Q5LDE5NjI0NzY5NjgsLTkxODA4MDUxOCwtMTIzNzkxNzk2MCwt
-Nzg5MDY5NTI1XX0=
+eyJoaXN0b3J5IjpbLTQ1NjMwOTA2MCw4OTAzNzYzODEsLTcwOT
+AwOTU3OCwtMTcwMDU1MzIzMywtMTYwNjQ1NTMyMiwxOTIyMzIy
+NzI5LC0yMTM4MTQyMzgyLC0xMjEyNDI1OTY0LC01NDEzMzQyNj
+QsLTY2ODY0NTY3OCwxMDkyMDkyMjAzLC01Mjk4MjM3MDgsLTEx
+Mjg2MjA0MzksLTM1NzA3NjY0Nyw5NzIzMTMwOTksMTgwMTU2Nj
+gzNSw4NDI5NzM5NDksMTk2MjQ3Njk2OCwtOTE4MDgwNTE4LC0x
+MjM3OTE3OTYwXX0=
 -->
