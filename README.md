@@ -85,7 +85,7 @@ Use the binary to create the AWS Cloudformation stack in your AWS account to set
 ```shell
 clusterawsadm alpha bootstrap create-stack
 ```
-This should take a while but create the similar IAM objects in the AWS account 
+This should take a while but creates the IAM objects, similar to the output below, in the AWS account 
 
 ```console
 Resource |Type |Status
@@ -706,11 +706,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMTA3MzM4Mjc4MywxMjMxOTE2MTIyLDg5MD
-M3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUzMjMzLC0xNjA2NDU1
-MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzODIsLTEyMTI0MjU5Nj
-QsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOTIyMDMsLTUy
-OTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2NjQ3LDk3MjMxMz
-A5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwxOTYyNDc2OTY4LC05
-MTgwODA1MThdfQ==
+eyJoaXN0b3J5IjpbLTE2NTk0NzQ1ODIsMTA3MzM4Mjc4MywxMj
+MxOTE2MTIyLDg5MDM3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUz
+MjMzLC0xNjA2NDU1MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzOD
+IsLTEyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEw
+OTIwOTIyMDMsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MD
+c2NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwx
+OTYyNDc2OTY4XX0=
 -->
