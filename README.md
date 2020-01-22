@@ -486,7 +486,7 @@ workload-cluster-md-0-56d9ccc8d8-txp5q   aws:////i-01596ec8c736d6f87   running
 
 ### Manually increasing the # of control plane nodes
 
-Since control plane nodes are not managed by a machinedeployment, a new control plane machine object has to be created similar to the yaml below. 
+Since control plane nodes are not managed by a machinedeployment, a new control plane machine object has to be created, similar to the yaml provided below. 
 
 Note: It was observed that reusing the machinenames caused problems. May be a bug that needs to be addressed. 
 
@@ -536,13 +536,12 @@ spec:
   instanceType: t2.medium
   sshKeyName: awsbastion
 ```
-Change the `instanceType`, `sshKeyName`, `K8s version` and other name references accordingly.  Once done apply the configuration file.
+Change the `instanceType`, `sshKeyName`, `K8s version` and other name references accordingly.  Once done, apply the configuration file.
 
 ```shell
 kubectl apply -f ./examples/_out/addmasternode.yaml
 ```
-where `./examples/_out/addmasternode.yaml` is the name of the name of the newly created file. Once successfully completed, a new EC2 instance is created, kubeadm joins the node to the cluster as a master node. Validate the results using the AWS EC2 console. You should also observe an additional `instance in server` in the LB configuration.  
-In the current example, observe the 4 master nodes. 
+where `./examples/_out/addmasternode.yaml` is the name of the newly created file. Once successfully completed, a new EC2 instance is created, kubeadm joins the node to the cluster as a master node. Validate the results using the AWS EC2 console. You should also observe an additional `instance in server` in the LB configuration.  In the current example, observe the 4 master nodes. 
 
 ```shell
 kubectl --kubeconfig=/tmp/workload-cluster.conf get nodes
@@ -570,7 +569,7 @@ workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
 ...
 ```
 ### Manually decreasing the # of control plane nodes
-Since control plane nodes are not managed by a machinedeployment, a control plane machine object and its associated references would need to be deleted. [check if there is a better way].In this example, we will delete the `workload-cluster-controlplane-2` machine. Doing so deletes its associated AWSMachine `workload-cluster-controlplane-2` and KubeadmConfig `workload-cluster-controlplane-2`
+Since control plane nodes are not managed by a machinedeployment, a control plane machine object and its associated references would need to be deleted. [check if there is a better way]. In this example, we will delete the `workload-cluster-controlplane-2` machine. Doing so deletes its associated AWSMachine `workload-cluster-controlplane-2` and KubeadmConfig `workload-cluster-controlplane-2`
 
 ```shell
 kubectl delete ma workload-cluster-controlplane-2
@@ -714,11 +713,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTgxMTI1MDQ4OSwxMDczMzgyNzgzLDEyMz
-E5MTYxMjIsODkwMzc2MzgxLC03MDkwMDk1NzgsLTE3MDA1NTMy
-MzMsLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4Mi
-wtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5
-MjA5MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNz
-Y2NDcsOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOTQ5LDE5
-NjI0NzY5NjhdfQ==
+eyJoaXN0b3J5IjpbLTcyMzM2MzE1NywtODExMjUwNDg5LDEwNz
+MzODI3ODMsMTIzMTkxNjEyMiw4OTAzNzYzODEsLTcwOTAwOTU3
+OCwtMTcwMDU1MzIzMywtMTYwNjQ1NTMyMiwxOTIyMzIyNzI5LC
+0yMTM4MTQyMzgyLC0xMjEyNDI1OTY0LC01NDEzMzQyNjQsLTY2
+ODY0NTY3OCwxMDkyMDkyMjAzLC01Mjk4MjM3MDgsLTExMjg2Mj
+A0MzksLTM1NzA3NjY0Nyw5NzIzMTMwOTksMTgwMTU2NjgzNSw4
+NDI5NzM5NDldfQ==
 -->
