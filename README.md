@@ -124,19 +124,19 @@ export CONTROL_PLANE_MACHINE_TYPE="t2.medium"
 export NODE_MACHINE_TYPE="t2.medium"
 export KUBERNETES_VERSION=1.16.1
 ```
-Generate the sample yaml files that will be required to setup the management cluster (CRDs/controllers) and the files needed to setup the workload clusters. 
+Generate the sample yaml files. These files are required to setup the management cluster (CRDs/controllers) and are also needed to setup the workload clusters. 
 
 ```shell
 make generate-examples
 ```
 All the yamls are generated in the `./example/_out` folder
 
-Create a Management cluster using `kind`
+Create a simple management cluster using `kind`
 
 ```shell
 kind create cluster --name=clusterapi
 ``` 
-In a few minutes, the management cluster is instantiated in the Ubuntu server!!!
+Within a few minutes, the management cluster is instantiated in the Ubuntu server!!!
 
 ```console
 Creating cluster "clusterapi" ...
@@ -708,11 +708,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbMjA5Njk5NjUyLDEwNzMzODI3ODMsMTIzMT
-kxNjEyMiw4OTAzNzYzODEsLTcwOTAwOTU3OCwtMTcwMDU1MzIz
-MywtMTYwNjQ1NTMyMiwxOTIyMzIyNzI5LC0yMTM4MTQyMzgyLC
-0xMjEyNDI1OTY0LC01NDEzMzQyNjQsLTY2ODY0NTY3OCwxMDky
-MDkyMjAzLC01Mjk4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3Nj
-Y0Nyw5NzIzMTMwOTksMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2
-MjQ3Njk2OF19
+eyJoaXN0b3J5IjpbMTc2NjkwODUwNSwxMDczMzgyNzgzLDEyMz
+E5MTYxMjIsODkwMzc2MzgxLC03MDkwMDk1NzgsLTE3MDA1NTMy
+MzMsLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4Mi
+wtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5
+MjA5MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5LC0zNTcwNz
+Y2NDcsOTcyMzEzMDk5LDE4MDE1NjY4MzUsODQyOTczOTQ5LDE5
+NjI0NzY5NjhdfQ==
 -->
