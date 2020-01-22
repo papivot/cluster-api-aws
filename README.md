@@ -122,6 +122,7 @@ export CLUSTER_NAME="workload-cluster"
 export AWS_REGION="us-east-2"
 export CONTROL_PLANE_MACHINE_TYPE="t2.medium"
 export NODE_MACHINE_TYPE="t2.medium"
+export KUBERNETES_VERSION=1.16.1
 ```
 Generate the sample yaml files that will be required to setup the management cluster (CRDs/controllers) and the files needed to setup the workload clusters. 
 
@@ -707,11 +708,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTE2MTQ0NzkxMDksMTA3MzM4Mjc4MywxMj
-MxOTE2MTIyLDg5MDM3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUz
-MjMzLC0xNjA2NDU1MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzOD
-IsLTEyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEw
-OTIwOTIyMDMsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MD
-c2NjQ3LDk3MjMxMzA5OSwxODAxNTY2ODM1LDg0Mjk3Mzk0OSwx
-OTYyNDc2OTY4XX0=
+eyJoaXN0b3J5IjpbMjA5Njk5NjUyLDEwNzMzODI3ODMsMTIzMT
+kxNjEyMiw4OTAzNzYzODEsLTcwOTAwOTU3OCwtMTcwMDU1MzIz
+MywtMTYwNjQ1NTMyMiwxOTIyMzIyNzI5LC0yMTM4MTQyMzgyLC
+0xMjEyNDI1OTY0LC01NDEzMzQyNjQsLTY2ODY0NTY3OCwxMDky
+MDkyMjAzLC01Mjk4MjM3MDgsLTExMjg2MjA0MzksLTM1NzA3Nj
+Y0Nyw5NzIzMTMwOTksMTgwMTU2NjgzNSw4NDI5NzM5NDksMTk2
+MjQ3Njk2OF19
 -->
