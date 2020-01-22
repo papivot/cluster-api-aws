@@ -215,7 +215,7 @@ With this, the management cluster is now ready. You can now start deploying work
 
 * Step 1 - Creating the Cluster object
 
-Note - If you want to have use your custom VPC cidr block, you can modify the cluster.yaml accordingly - 
+Note - If you want to have use your custom VPC CIDR block, you can modify the `cluster.yaml` accordingly - 
 
 ```yaml
 ...
@@ -245,10 +245,12 @@ spec:
  ...
 ```
 
+Now create the cluster object.
+
 ```shell
 kubectl apply -f ./examples/_out/cluster.yaml
 ```
-
+Should d
 ```console
 cluster.cluster.x-k8s.io/workload-cluster created
 awscluster.infrastructure.cluster.x-k8s.io/workload-cluster created
@@ -708,7 +710,7 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTUzNDMwMzIwNywxMDczMzgyNzgzLDEyMz
+eyJoaXN0b3J5IjpbLTk5NTQ2ODUwNCwxMDczMzgyNzgzLDEyMz
 E5MTYxMjIsODkwMzc2MzgxLC03MDkwMDk1NzgsLTE3MDA1NTMy
 MzMsLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4Mi
 wtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5
