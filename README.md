@@ -250,7 +250,7 @@ Now create the cluster object.
 ```shell
 kubectl apply -f ./examples/_out/cluster.yaml
 ```
-Should d
+Should display an output similar to this - 
 ```console
 cluster.cluster.x-k8s.io/workload-cluster created
 awscluster.infrastructure.cluster.x-k8s.io/workload-cluster created
@@ -262,6 +262,7 @@ Validate within the AWS console that a new VPC with associated subnets, NAT gate
 ```shell
 kubectl apply -f ./examples/_out/controlplane.yaml
 ```
+Should display an output similar to this -
 ```console
 kubeadmconfig.bootstrap.cluster.x-k8s.io/workload-cluster-controlplane-0 created
 kubeadmconfig.bootstrap.cluster.x-k8s.io/workload-cluster-controlplane-1 created
@@ -710,7 +711,7 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTk5NTQ2ODUwNCwxMDczMzgyNzgzLDEyMz
+eyJoaXN0b3J5IjpbMTc1NDQ5NDc2OSwxMDczMzgyNzgzLDEyMz
 E5MTYxMjIsODkwMzc2MzgxLC03MDkwMDk1NzgsLTE3MDA1NTMy
 MzMsLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEzODE0MjM4Mi
 wtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2NDU2NzgsMTA5
