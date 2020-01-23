@@ -74,6 +74,20 @@ sudo mv kind /usr/local/bin
 ```
 * aws cli (v1 or v2) installed and configured to access your AWS account.
 
+* Export the following environment variables. These variables ***should be modified as per the requirements***. 
+
+```console
+export AWS_CREDENTIALS=$(aws iam create-access-key --user-name bootstrapper.cluster-api-provider-aws.sigs.k8s.io)
+export AWS_ACCESS_KEY_ID=$(echo $AWS_CREDENTIALS | jq .AccessKey.AccessKeyId -r)
+export AWS_SECRET_ACCESS_KEY=$(echo $AWS_CREDENTIALS | jq .AccessKey.SecretAccessKey -r)
+export SSH_KEY_NAME="awsbastion"
+export CLUSTER_NAME="workload-cluster"
+export AWS_REGION="us-east-2"
+export CONTROL_PLANE_MACHINE_TYPE="t2.medium"
+export NODE_MACHINE_TYPE="t2.medium"
+export KUBERNETES_VERSION=1.16.1
+```
+
 ### Clone the stable `release-0.4` branch that provides `v1alpha2` support 
 ```shell
 git clone https://github.com/kubernetes-sigs/cluster-api-provider-aws.git --branch release-0.4
@@ -114,19 +128,8 @@ This completes the preliminary steps required to setup the environment. These st
 
 ### Setting up the Management Cluster 
 
-Export the following environment variables. These variables ***should be modified as per the requirements***. 
 
-```console
-export AWS_CREDENTIALS=$(aws iam create-access-key --user-name bootstrapper.cluster-api-provider-aws.sigs.k8s.io)
-export AWS_ACCESS_KEY_ID=$(echo $AWS_CREDENTIALS | jq .AccessKey.AccessKeyId -r)
-export AWS_SECRET_ACCESS_KEY=$(echo $AWS_CREDENTIALS | jq .AccessKey.SecretAccessKey -r)
-export SSH_KEY_NAME="awsbastion"
-export CLUSTER_NAME="workload-cluster"
-export AWS_REGION="us-east-2"
-export CONTROL_PLANE_MACHINE_TYPE="t2.medium"
-export NODE_MACHINE_TYPE="t2.medium"
-export KUBERNETES_VERSION=1.16.1
-```
+
 Generate the sample yaml files. These files are required to setup the management cluster (CRDs/controllers) and are also needed to setup the workload clusters. 
 
 ```shell
@@ -716,11 +719,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTIwMjkyNjA5OTMsLTUwNjczMTAzOSwtND
-A1MTQxMTA5LC04MTEyNTA0ODksMTA3MzM4Mjc4MywxMjMxOTE2
-MTIyLDg5MDM3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUzMjMzLC
-0xNjA2NDU1MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzODIsLTEy
-MTI0MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEwOTIwOT
-IyMDMsLTUyOTgyMzcwOCwtMTEyODYyMDQzOSwtMzU3MDc2NjQ3
-LDk3MjMxMzA5OV19
+eyJoaXN0b3J5IjpbLTg1MjA2OTgwNSwtMjAyOTI2MDk5MywtNT
+A2NzMxMDM5LC00MDUxNDExMDksLTgxMTI1MDQ4OSwxMDczMzgy
+NzgzLDEyMzE5MTYxMjIsODkwMzc2MzgxLC03MDkwMDk1NzgsLT
+E3MDA1NTMyMzMsLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEz
+ODE0MjM4MiwtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2ND
+U2NzgsMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5
+LC0zNTcwNzY2NDddfQ==
 -->
