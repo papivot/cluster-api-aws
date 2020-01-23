@@ -84,6 +84,12 @@ Copy the generated **clusterawsadm** binary to /usr/local/bin
 ```shell
 sudo cp ./bin/clusterawsadm /usr/local/bin
 ```
+
+Set the AWS region that you want to use for the stack deployment:
+```shell
+export AWS_REGION=us-east-1
+```
+
 Use the binary, to create an AWS Cloudformation stack in your AWS account, to set up the required IAM users/group/profiles.
 
 ```shell
