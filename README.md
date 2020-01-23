@@ -74,7 +74,7 @@ sudo mv kind /usr/local/bin
 ```
 * aws cli (v1 or v2) installed and configured to access your AWS account.
 
-* Export the following environment variables. These variables ***should be modified as per the requirements***. 
+* Export the following environment variables. These variables ***should be modified as per user's requirements***. 
 
 ```console
 export AWS_CREDENTIALS=$(aws iam create-access-key --user-name bootstrapper.cluster-api-provider-aws.sigs.k8s.io)
@@ -719,11 +719,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbLTg1MjA2OTgwNSwtMjAyOTI2MDk5MywtNT
-A2NzMxMDM5LC00MDUxNDExMDksLTgxMTI1MDQ4OSwxMDczMzgy
-NzgzLDEyMzE5MTYxMjIsODkwMzc2MzgxLC03MDkwMDk1NzgsLT
-E3MDA1NTMyMzMsLTE2MDY0NTUzMjIsMTkyMjMyMjcyOSwtMjEz
-ODE0MjM4MiwtMTIxMjQyNTk2NCwtNTQxMzM0MjY0LC02Njg2ND
-U2NzgsMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0xMTI4NjIwNDM5
-LC0zNTcwNzY2NDddfQ==
+eyJoaXN0b3J5IjpbNTk5Mzg5NzksLTg1MjA2OTgwNSwtMjAyOT
+I2MDk5MywtNTA2NzMxMDM5LC00MDUxNDExMDksLTgxMTI1MDQ4
+OSwxMDczMzgyNzgzLDEyMzE5MTYxMjIsODkwMzc2MzgxLC03MD
+kwMDk1NzgsLTE3MDA1NTMyMzMsLTE2MDY0NTUzMjIsMTkyMjMy
+MjcyOSwtMjEzODE0MjM4MiwtMTIxMjQyNTk2NCwtNTQxMzM0Mj
+Y0LC02Njg2NDU2NzgsMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0x
+MTI4NjIwNDM5XX0=
 -->
