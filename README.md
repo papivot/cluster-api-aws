@@ -1,6 +1,31 @@
-# Cluster API on AWS
+# Cluster API on AWS <!-- omit in toc -->
 
-### Working with **release-0.4** providing support for **v1alpha2**
+### Working with **release-0.4** providing support for **v1alpha2** <!-- omit in toc -->
+
+#### Table of Content <!-- omit in toc -->
+- [Technical Details [to expand]](#technical-details-to-expand)
+- [Setup](#setup)
+  - [Preparations](#preparations)
+  - [Clone the stable `release-0.4` branch that provides `v1alpha2` support](#clone-the-stable-release-04-branch-that-provides-v1alpha2-support)
+  - [Create the Cloudformation stack](#create-the-cloudformation-stack)
+- [Deploying the Management Cluster](#deploying-the-management-cluster)
+- [Deploying the Workload Cluster(s)](#deploying-the-workload-clusters)
+  - [Creating the Cluster object](#creating-the-cluster-object)
+  - [Creating the Control Plane machines.](#creating-the-control-plane-machines)
+  - [Generating the Kubeconfig file](#generating-the-kubeconfig-file)
+  - [Install the CNI addons to the Workload Cluster.](#install-the-cni-addons-to-the-workload-cluster)
+  - [Deploy the Worker Nodes leveraging the Cluster API.](#deploy-the-worker-nodes-leveraging-the-cluster-api)
+- [Lifecycle management of Workload Cluster](#lifecycle-management-of-workload-cluster)
+  - [Manually increasing # of Worker Nodes](#manually-increasing--of-worker-nodes)
+  - [Manually decreasing # of Worker Nodes](#manually-decreasing--of-worker-nodes)
+  - [~~Resurrection of a worker node~~](#sresurrection-of-a-worker-nodes)
+  - [Manually increasing # of Control Plane Nodes](#manually-increasing--of-control-plane-nodes)
+  - [Manually decreasing # of Control Plane Nodes](#manually-decreasing--of-control-plane-nodes)
+  - [~~Resurrection of a control plane node~~](#sresurrection-of-a-control-plane-nodes)
+  - [Accessing EC2 instances](#accessing-ec2-instances)
+  - [Upgrading K8s version on Worker Nodes.](#upgrading-k8s-version-on-worker-nodes)
+  - [Destroying/Deleting a Workload cluster](#destroyingdeleting-a-workload-cluster)
+- [References](#references)
 
 ## Technical Details [to expand]
 
@@ -76,9 +101,6 @@ sudo mv kind /usr/local/bin
 * Export the following environment variables. These variables ***should be modified as per user's requirements***. 
 
 ```console
-export AWS_CREDENTIALS=$(aws iam create-access-key --user-name bootstrapper.cluster-api-provider-aws.sigs.k8s.io)
-export AWS_ACCESS_KEY_ID=$(echo $AWS_CREDENTIALS | jq .AccessKey.AccessKeyId -r)
-export AWS_SECRET_ACCESS_KEY=$(echo $AWS_CREDENTIALS | jq .AccessKey.SecretAccessKey -r)
 export SSH_KEY_NAME="awsbastion"
 export CLUSTER_NAME="workload-cluster"
 export AWS_REGION="us-east-2"
@@ -97,7 +119,10 @@ Copy the generated **clusterawsadm** binary to /usr/local/bin
 ```shell
 sudo cp ./bin/clusterawsadm /usr/local/bin
 ```
-Use the binary, to create an AWS Cloudformation stack in your AWS account, to set up the required IAM users/group/profiles.
+
+### Create the Cloudformation stack 
+
+Use the **clusterawsadm** binary to create an AWS Cloudformation stack in your AWS account, to set up the required IAM users/group/profiles.
 
 ```shell
 clusterawsadm alpha bootstrap create-stack
@@ -125,9 +150,15 @@ AWS::IAM::Role |nodes.cluster-api-provider-aws.sigs.k8s.io |CREATE_COMPLETE
 
 This completes the preliminary steps required to setup the environment. These steps are performed only once.
 
-### Setting up the Management Cluster 
+## Deploying the Management Cluster 
 
+Export some additonal enviornment variables. These variables are required, along with the previously exported ones, to generate the sample yaml files. - 
 
+```console
+export AWS_CREDENTIALS=$(aws iam create-access-key --user-name bootstrapper.cluster-api-provider-aws.sigs.k8s.io)
+export AWS_ACCESS_KEY_ID=$(echo $AWS_CREDENTIALS | jq .AccessKey.AccessKeyId -r)
+export AWS_SECRET_ACCESS_KEY=$(echo $AWS_CREDENTIALS | jq .AccessKey.SecretAccessKey -r)
+```
 
 Generate the sample yaml files. These files are required to setup the management cluster (CRDs/controllers) and are also needed to setup the workload clusters. 
 
@@ -216,9 +247,11 @@ capi-system          capi-controller-manager-66d98dc68f-jx5c5           1/1     
 With this, the management cluster is now ready. You can now start deploying workload-clusters by modifying/tweaking the other yaml files in the `./example/_out` folder. 
 
 ----
-## Deploying Workload Clusters 
+## Deploying the Workload Cluster(s) 
 
-* Step 1 - Creating the Cluster object
+These steps would need to be performed for each Workload cluster that need to be deployed. Obviously, settings and variables need to be adjusted accordingly. 
+
+### Creating the Cluster object
 
 Note - If you want to have use your custom VPC CIDR block, you can modify the `cluster.yaml` accordingly - 
 
@@ -262,7 +295,8 @@ awscluster.infrastructure.cluster.x-k8s.io/workload-cluster created
 ```
 Validate within the AWS console that a new VPC with associated subnets, NAT gateway, security groups, LB, a bastion server and other objects has been created. This should take approx. 10 mins. 
 
-* Step 2 - Creating the control plane machines. 3 nodes in this example. 
+### Creating the Control Plane machines. 
+- 3 nodes in this example. 
 
 ```shell
 kubectl apply -f ./examples/_out/controlplane.yaml
@@ -282,7 +316,9 @@ awsmachine.infrastructure.cluster.x-k8s.io/workload-cluster-controlplane-2 creat
 
 This may take a while - 10-15 mins. 
 
-* Step 3 - Once this is complete, we need to grab the kubeconfig file that was associated with this workload server. The `kubeconfig` is stored as a secret within the management cluster, in the namespace associated with the workload cluster (default in this example) . This will allow us to connect to the workload cluster. 
+### Generating the Kubeconfig file
+
+Once this is complete, we need to grab the kubeconfig file that was associated with this workload server. The `kubeconfig` is stored as a secret within the management cluster, in the namespace associated with the workload cluster (default in this example) . This will allow us to connect to the workload cluster. 
 
 ```shell
 kubectl get secrets -n default workload-cluster-kubeconfig -o json |jq -r .data.value|base64 -d > /tmp/workload-cluster.conf
@@ -300,7 +336,7 @@ contexts:
     cluster: workload-cluster
 ...
 ```
-* Step 4 - Install the CNI addons to the workload cluster.
+###  Install the CNI addons to the Workload Cluster.
 
 ```shell
 kubectl --kubeconfig=/tmp/workload-cluster.conf apply -f ./examples/addons.yaml
@@ -338,7 +374,7 @@ kube-system   coredns-5644d7b6d9-r9mlv                                          
 kube-system   etcd-ip-10-0-0-18.us-east-2.compute.internal                       1/1     Running   0          9m43s
 ...
 ```
-* Step 5 - Deploy the worker nodes leveraging the cluster API.
+###  Deploy the Worker Nodes leveraging the Cluster API.
 
 ```shell
 kubectl apply -f ./examples/_out/machinedeployment.yaml
@@ -365,10 +401,9 @@ ip-10-0-0-18.us-east-2.compute.internal    Ready    master   18m     v1.16.1
 ip-10-0-0-200.us-east-2.compute.internal   Ready    master   19m     v1.16.1
 ip-10-0-0-35.us-east-2.compute.internal    Ready    master   18m     v1.16.1
 ```
+## Lifecycle management of Workload Cluster
 
-## Lifecycle management of workload cluster
-
-### Manually increasing the # of worker nodes
+### Manually increasing # of Worker Nodes
 This is as simple as increasing the replica count of the machinedeployments object.  
 
 ```shell
@@ -410,7 +445,7 @@ ip-10-0-0-244.us-east-2.compute.internal   Ready    <none>   8m36s   v1.16.1
 ip-10-0-0-18.us-east-2.compute.internal    Ready    master   15h     v1.16.1
 ...
 ```
-### Manually decreasing the # of worker nodes
+### Manually decreasing # of Worker Nodes
 
 This is as simple as decreasing the replica count of the machinedeployments object.  
 
@@ -451,7 +486,9 @@ ip-10-0-0-244.us-east-2.compute.internal   Ready    <none>   15m4s   v1.16.1
 ip-10-0-0-18.us-east-2.compute.internal    Ready    master   15h     v1.16.1
 ...
 ```
-### ~~Resurrection of a worker node~~ [this does now work as v1alpha2 does not support resurrection???]
+### ~~Resurrection of a worker node~~ 
+- [this does now work as v1alpha2 does not support resurrection???]
+  
 For this demo, we will increase the worker node count back to 3 (in not already done). This can per performed by the steps in the section `Manually increasing the # of worker nodes` Once the cluster has reached a steady state, and all the nodes are available in the cluster, terminate one of the **worker nodes** from the AWS ec2 console. 
 
 ~~When the controller next runs the reconciliation loop and sees a missing machine from the machineset, a new ec2 instance should be spawned and added to the workload cluster.~~
@@ -489,8 +526,7 @@ workload-cluster-md-0-56d9ccc8d8-lsh4n   aws:////i-01a6e7b148de2eb18   running
 workload-cluster-md-0-56d9ccc8d8-txp5q   aws:////i-01596ec8c736d6f87   running
 ```
 
-### Manually increasing the # of control plane nodes
-
+### Manually increasing # of Control Plane Nodes
 Since control plane nodes are not managed by a machinedeployment, a new control plane machine object has to be created, similar to the yaml provided below. 
 
 Note: It was observed that reusing the machinenames caused problems. May be a bug that needs to be addressed. 
@@ -573,7 +609,7 @@ workload-cluster-controlplane-2          aws:////i-0ea2bf3d7fe0dc66f   running
 workload-cluster-controlplane-3          aws:////i-02dbc49e4f668bdfd   running
 ...
 ```
-### Manually decreasing the # of control plane nodes
+### Manually decreasing # of Control Plane Nodes
 Since control plane nodes are not managed by a machinedeployment, a control plane machine object and its associated references would need to be deleted. [check if there is a better way]. In this example, we will delete the `workload-cluster-controlplane-2` machine. Doing so deletes its associated AWSMachine `workload-cluster-controlplane-2` and KubeadmConfig `workload-cluster-controlplane-2`
 
 ```shell
@@ -585,7 +621,9 @@ kubectl get ma
 kubectl get AWSMachine
 kubectl get KubeadmConfig
 ```
-### ~~Resurrection of a control plane node~~ [this does now work as v1alpha2 does not support resurrection???]
+### ~~Resurrection of a control plane node~~ 
+- [this does now work as v1alpha2 does not support resurrection???]
+  
 For this demo, we will increase the worker node count back to 4 (in not already done). This can per performed by the steps in the section `Manually increasing the # of control plane nodes` Once the cluster has reached a steady state, and all the master nodes are available in the cluster, terminate one of the **master nodes** from the AWS ec2 console. 
 
 ~~When the controller next runs the reconciliation loop and sees a missing machine, a new ec2 instance should be spawned and added to the workload cluster as a master node.~~
@@ -608,7 +646,7 @@ To cleanup, delete the failed machine.
 ```shell
 kubectl delete ma workload-cluster-controlplane-4
 ```
-### Accessing the EC2 instances
+### Accessing EC2 instances
 
 Note the IP/Public DNS of the bastion host associated with the cluster. For e.g. `ec2-[ip-address].us-east-2.compute.amazonaws.com`
 
@@ -656,7 +694,7 @@ Welcome to Ubuntu 18.04.3 LTS (GNU/Linux 4.15.0-1052-aws x86_64)
 ...
 ```
 
-### Upgrading K8s version of worker nodes.
+### Upgrading K8s version on Worker Nodes.
 
 Note only minor version upgrades are recommended. For e.g. 1.16.1 -> 1.16.2. (need to verify if this is even a recommended scenario, if the control plane is still at the lower version - e.g. 1.16.1)
 
@@ -680,7 +718,7 @@ kubectl apply -f machinedeployment.yaml
 Flow - A new EC2 instance is deployed (using an AMI that available for the new version of Kubernetes requested). Kubeadm workflow joins the instance as a new node to the cluster. One of the older nodes, that is part of the machinedeployment being upgrades, is evacuated, evicted from the cluster and the EC2 instance is terminated. These steps are repeated until all the nodes have been refreshed. 
 
 Once all the nodes have been updates, the version will reflect the new version.
-#### Before
+#### Before <!-- omit in toc -->
 ```console
 NAME                                        STATUS   ROLES    AGE     VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION    CONTAINER-RUNTIME
 ...
@@ -688,7 +726,7 @@ ip-10-20-0-10.us-east-2.compute.internal    Ready    <none>   6m38s   v1.16.1   
 ip-10-20-0-79.us-east-2.compute.internal    Ready    <none>   6m49s   v1.16.1   10.20.0.79    <none>        Ubuntu 18.04.3 LTS   4.15.0-1052-aws   containerd://1.3.0
 ...
 ```
-#### After
+#### After <!-- omit in toc -->
 
 ```console
 NAME                                        STATUS   ROLES    AGE   VERSION   INTERNAL-IP   EXTERNAL-IP   OS-IMAGE             KERNEL-VERSION    CONTAINER-RUNTIME
@@ -698,7 +736,7 @@ ip-10-20-0-193.us-east-2.compute.internal   Ready    <none>   12m   v1.16.2   10
 ...
 ```
 
-### Destroying/Deleting a workload cluster
+### Destroying/Deleting a Workload cluster
 
 This should be a relatively simple task of deleting the cluster -
 
@@ -709,7 +747,6 @@ This will take some time as all EC2 instances and AWS VPC and related objects ar
 ```console
 cluster.cluster.x-k8s.io "workload-cluster" deleted
 ```
-
 ## References
 
 1. [https://blog.scottlowe.org/2019/08/27/bootstrapping-a-kubernetes-cluster-on-aws-with-clusterapi/](https://blog.scottlowe.org/2019/08/27/bootstrapping-a-kubernetes-cluster-on-aws-with-clusterapi/)
@@ -717,12 +754,3 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 3. [https://github.com/kubernetes-sigs/cluster-api-provider-aws/blob/v0.3.7/docs/getting-started.md](https://github.com/kubernetes-sigs/cluster-api-provider-aws/blob/v0.3.7/docs/getting-started.md)
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
-<!--stackedit_data:
-eyJoaXN0b3J5IjpbMjAwNzczMjI3NywtNDY1NTQ4OTE0LDU5OT
-M4OTc5LC04NTIwNjk4MDUsLTIwMjkyNjA5OTMsLTUwNjczMTAz
-OSwtNDA1MTQxMTA5LC04MTEyNTA0ODksMTA3MzM4Mjc4MywxMj
-MxOTE2MTIyLDg5MDM3NjM4MSwtNzA5MDA5NTc4LC0xNzAwNTUz
-MjMzLC0xNjA2NDU1MzIyLDE5MjIzMjI3MjksLTIxMzgxNDIzOD
-IsLTEyMTI0MjU5NjQsLTU0MTMzNDI2NCwtNjY4NjQ1Njc4LDEw
-OTIwOTIyMDNdfQ==
--->
