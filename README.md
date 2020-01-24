@@ -1,5 +1,7 @@
 # Cluster API on AWS
 
+<!-- TOC -->
+autoauto- [Cluster API on AWS](#cluster-api-on-aws)auto - [Working with **release-0.4** providing support for **v1alpha2**](#working-with-release-04-providing-support-for-v1alpha2)auto - [Technical Details [to expand]](#technical-details-to-expand)auto - [Setup](#setup)auto - [Preparations](#preparations)auto - [Clone the stable `release-0.4` branch that provides `v1alpha2` support](#clone-the-stable-release-04-branch-that-provides-v1alpha2-support)auto - [Setting up the Management Cluster](#setting-up-the-management-cluster)auto - [Deploying Workload Clusters](#deploying-workload-clusters)auto - [Lifecycle management of workload cluster](#lifecycle-management-of-workload-cluster)auto - [Manually increasing the # of worker nodes](#manually-increasing-the--of-worker-nodes)auto - [Manually decreasing the # of worker nodes](#manually-decreasing-the--of-worker-nodes)auto - [~~Resurrection of a worker node~~ [this does now work as v1alpha2 does not support resurrection???]](#resurrection-of-a-worker-node-this-does-now-work-as-v1alpha2-does-not-support-resurrection)auto - [Manually increasing the # of control plane nodes](#manually-increasing-the--of-control-plane-nodes)auto - [Manually decreasing the # of control plane nodes](#manually-decreasing-the--of-control-plane-nodes)auto - [~~Resurrection of a control plane node~~ [this does now work as v1alpha2 does not support resurrection???]](#resurrection-of-a-control-plane-node-this-does-now-work-as-v1alpha2-does-not-support-resurrection)auto - [Accessing the EC2 instances](#accessing-the-ec2-instances)auto - [Upgrading K8s version of worker nodes.](#upgrading-k8s-version-of-worker-nodes)auto - [Before](#before)auto - [After](#after)auto - [Destroying/Deleting a workload cluster](#destroyingdeleting-a-workload-cluster)auto - [References](#references)autoauto<!-- /TOC -->
 
 ### Working with **release-0.4** providing support for **v1alpha2**
 
@@ -719,11 +721,11 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945)
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTk5Mzg5NzksLTg1MjA2OTgwNSwtMjAyOT
-I2MDk5MywtNTA2NzMxMDM5LC00MDUxNDExMDksLTgxMTI1MDQ4
-OSwxMDczMzgyNzgzLDEyMzE5MTYxMjIsODkwMzc2MzgxLC03MD
-kwMDk1NzgsLTE3MDA1NTMyMzMsLTE2MDY0NTUzMjIsMTkyMjMy
-MjcyOSwtMjEzODE0MjM4MiwtMTIxMjQyNTk2NCwtNTQxMzM0Mj
-Y0LC02Njg2NDU2NzgsMTA5MjA5MjIwMywtNTI5ODIzNzA4LC0x
-MTI4NjIwNDM5XX0=
+eyJoaXN0b3J5IjpbLTkyMTE2NjE0OCw1OTkzODk3OSwtODUyMD
+Y5ODA1LC0yMDI5MjYwOTkzLC01MDY3MzEwMzksLTQwNTE0MTEw
+OSwtODExMjUwNDg5LDEwNzMzODI3ODMsMTIzMTkxNjEyMiw4OT
+AzNzYzODEsLTcwOTAwOTU3OCwtMTcwMDU1MzIzMywtMTYwNjQ1
+NTMyMiwxOTIyMzIyNzI5LC0yMTM4MTQyMzgyLC0xMjEyNDI1OT
+Y0LC01NDEzMzQyNjQsLTY2ODY0NTY3OCwxMDkyMDkyMjAzLC01
+Mjk4MjM3MDhdfQ==
 -->
