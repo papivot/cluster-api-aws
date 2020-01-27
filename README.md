@@ -96,7 +96,7 @@ curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0
 chmod +x kind
 sudo mv kind /usr/local/bin
 ```
-* aws cli (v1 or v2) [installed](#https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html) and [configured](#https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) to access your AWS account. Click on the links for additional directions. 
+* aws cli (v1 or v2) [installed](#https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html) and [configured](https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) to access your AWS account. Click on the links for additional directions. 
 
 * Export the following environment variables. These variables ***should be modified as per user's requirements***. 
 
@@ -755,5 +755,5 @@ cluster.cluster.x-k8s.io "workload-cluster" deleted
 4. [https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/](https://blog.chernand.io/2019/03/19/getting-familiar-with-clusterapi/)
 5. [https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945](https://medium.com/condenastengineering/clusterapi-a-guide-on-how-to-get-started-ff9a81262945).
 <!--stackedit_data:
-eyJoaXN0b3J5IjpbNTI4OTQzMDk3XX0=
+eyJoaXN0b3J5IjpbLTEzODU2MDc0MTAsNTI4OTQzMDk3XX0=
 -->
