@@ -96,7 +96,7 @@ curl -Lo ./kind https://github.com/kubernetes-sigs/kind/releases/download/v0.7.0
 chmod +x kind
 sudo mv kind /usr/local/bin
 ```
-* aws cli (v1 or v2) installed and configured to access your AWS account.
+* aws cli (v1 or v2) [installed](#https://docs.aws.amazon.com/cli/latest/userguide/install-linux.html) and [configured](#https://docs.aws.amazon.com/cli/latest/userguide/cli-chap-configure.html) to access your AWS account.
 
 * Export the following environment variables. These variables ***should be modified as per user's requirements***. 
 
