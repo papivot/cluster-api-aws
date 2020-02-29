@@ -4,7 +4,7 @@
 
 #### Table of Content <!-- omit in toc -->
 - [Technical Details [to expand]](#technical-details-to-expand)
-- [Setup](#setup)want to have use your 
+- [Setup](#setup)
   - [Preparations](#preparations)
   - [Clone the stable `release-0.4` branch that provides `v1alpha2` support](#clone-the-stable-release-04-branch-that-provides-v1alpha2-support)
   - [Create the Cloudformation stack](#create-the-cloudformation-stack)
