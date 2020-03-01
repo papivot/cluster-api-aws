@@ -253,7 +253,7 @@ These steps would need to be performed for each Workload cluster that need to be
 
 ### Creating the Cluster object
 
-Note - If you want to have use your custom VPC CIDR block, you can modify the `cluster.yaml` accordingly - 
+Note - If you want to use your custom VPC CIDR block, you can modify the `cluster.yaml` accordingly - 
 
 ```yaml
 ...
@@ -653,7 +653,7 @@ Note the IP/Public DNS of the bastion host associated with the cluster. For e.g.
 Use the ssh key that was references in the previous section to ssh into the bastion host. For e.g.
 
 ```shell
-ssh -i ssh -i [path/to]/awsbastion.pem ubuntu@ec2-ip-address.us-east-2.compute.amazonaws.com
+ssh -i [path/to]/awsbastion.pem ubuntu@ec2-ip-address.us-east-2.compute.amazonaws.com
 ```
 ```console
 The authenticity of host 'ec2-18-223-108-221.us-east-2.compute.amazonaws.com (18.223.108.221)' can't be established.
@@ -674,7 +674,7 @@ vi ~/.ssh/awsbastion.pem
 chmod 600 ~/.ssh/awsbastion.pem
 ```
 
-Now that the private key file has been transferred to the bastion host, you can connect to any of the EC2 instances that constitute the control place and worker nodes. Use the `Private DNS Name` from the AWS EC2 console for connection. 
+Now that the private key file has been transferred to the bastion host, you can connect to any of the EC2 instances that constitute the control plane and worker nodes. Use the `Private DNS Name` from the AWS EC2 console for connection. 
 
 ```shell
 ssh -i ~/.ssh/awsbastion.pem ubuntu@ip-10-0-0-226.us-east-2.compute.internal
